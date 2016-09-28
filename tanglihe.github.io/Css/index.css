@@ -1,0 +1,389 @@
+/*header部分*/
+header {
+    /*头部区域*/
+    width: 100%;
+}
+.header_top {
+    /*头部区域的上面一块*/
+    width: 1200px;
+    margin: 0 auto;
+}
+.top_logo {
+    /*头部区域的上面一块左边logo部分*/
+    margin-bottom: 20px;
+}
+.top_img {
+    /*logo图片*/
+    padding-top: 35px;
+    float: left;
+    margin-right: 20px;
+}
+.logo_description {
+    /*对logo图片的描述部分*/
+    float: left;
+    height: 43px;
+    line-height:20px;
+    border-left :1px #dcdcdc solid;
+    margin-top: 25px;
+    color: #999999;
+    padding-left: 20px;
+}
+
+.top_search {
+    /*头部区域的上面一块右边搜索部分*/
+    float: right;
+    margin-top: 25px;
+}
+.search {
+    /*文本框搜索部分*/
+    border:1px #dcdcdc solid;
+    border-right:0 none;
+    width: 283px;
+    height: 41px;
+    vertical-align: middle;
+    outline: none;
+    padding:0 13px;
+    color: #555;
+    font-size: 16px;
+}
+.submit {
+    /*搜索提交按钮部分*/
+    width: 44px;
+    height:43px;
+    vertical-align: middle;
+    border:0 none;
+    background: red url("../Images/search.png") no-repeat center;
+    outline: none;
+}
+.header_bottom {
+    /*头部区域的下面一块部分*/
+    width: 1200px;
+    margin:0 auto 10px;
+}
+.header_bottom ul {
+    /*头部区域的下面一块左边列表部分*/
+    width: 800px;
+    display: inline-block;
+}
+.header_bottom li {
+    /*头部区域的下面一块左边列表li标签设置相关属性部分*/
+    float: left;
+    margin-right:50px;
+    font-size: 20px;
+    line-height: 23px;
+}
+.header_bottom li a:hover {
+    /*头部区域的下面一块左边列表li标签的鼠标悬浮（hover事件）*/
+    color: red;
+}
+.bottom_right {
+    /*头部区域的下面一块右边两个超链接部分*/
+    float: right;
+}
+.bottom_right .join {
+    /*头部区域的下面一块右边join超链接部分属性设置*/
+    display: inline-block;
+    width: 63px;
+    height: 27px;
+    background: red;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    line-height: 27px;
+    font-weight: bold;
+}
+.bottom_right .login {
+    /*头部区域的下面一块右边login超链接部分属性设置*/
+    display: inline-block;
+    width: 52px;
+    height: 27px;
+    background: #a1a1a1;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    line-height: 27px;
+    font-weight: bold;
+}
+
+
+/*body部分*/
+.red_line {
+    /*nav导航条上面的红色条部分*/
+    width: 100%;
+    height: 5px;
+    background-color: #f24933;
+}
+.nav_bg {
+    /*导航条nav部分*/
+    background-color: #ff5842;
+    width: 100%;
+}
+.nav {
+    /*导航条nav的ul标签部分*/
+    width: 1200px;
+    margin:0 auto;
+}
+.nav li {
+    /*导航条nav的li标签部分*/
+    float: left;
+    font-size: 16px;
+    line-height:47px;
+    color: white;
+    height: 47px;
+    padding: 0 20px;
+    text-align: center;
+    border-right:1px #e9422c solid;
+}
+.nav li:hover {
+    background-color: #f24933;
+}
+.nav li a {
+    color: white;
+    display: inline-block;
+    width: 100%;
+    height:47px;
+}
+.nav li a:hover {
+    background-color: #f24933;
+}
+.nav .last a {
+    /*导航条nav的最后一个li标签的追加属性部分*/
+    border-right: 0 none;
+}
+.nav span {
+    display: inline-block;
+    font-size: 27px;
+    text-align: center;
+    color: blue;
+    float: right;
+    position: relative;
+    left:22px;
+    top:-47px;
+}
+
+#body #content {
+    /*body整个区域*/
+    margin:0 auto;
+    width:1200px;
+    background-color: lightsteelblue;
+}
+.exclusive_topics_top {
+    /*exclusive_topics区域左上方的文字部分*/
+    margin:16px 0 15px;
+    height: 41px;
+}
+.content_left {
+    /*exclusive_topics区域左上方的存放文字和图片的div标签部分*/
+    width: 300px;
+    display: inline-block;
+    padding-top: 5px;
+}
+.content_left p {
+    /*exclusive_topics区域左上方的存放文字的p标签部分*/
+    height: 32px;
+    display: inline-block;
+    font-size: 24px;
+    line-height: 32px;
+    color: #1f1f1f;
+}
+.content_right {
+    /*exclusive_topics区域右上方的存放切换按钮的div部分*/
+    float: right;
+}
+.turn_style {
+    /*exclusive_topics区域右上方的存放切换按钮的div里面的两个div属性部分*/
+    width: 41px;
+    height: 41px;
+    background-color: #f5f5f5;
+    color: #a4a4a4;
+    display: inline-block;
+    font-size: 21px;
+    line-height: 41px;
+    text-align: center;
+}
+.turn_style:hover {
+    /*exclusive_topics区域右上方的存放切换按钮的div里面的两个div的鼠标悬浮事件部分*/
+    color: #686868;
+    background-color: #eeeeee;
+}
+.exclusive_topics_bottom_1 {
+    /*exclusive_topics区域下方的存黑色背景、文字和红色背景条的div部分*/
+    width: 386px;
+    height: 327px;
+    border:1px #f8f8f8 solid;
+    float: left;
+    margin-right: 18px;
+}
+.exclusive_topics_bottom_2 {
+    /*exclusive_topics区域下方的存黑色背景、文字和红色背景条的div部分*/
+    width: 386px;
+    height: 327px;
+    border:1px #f8f8f8 solid;
+    float: left;
+}
+.bg_black {
+    /*黑色背景区域部分*/
+    width: 386px;
+    height: 221px;
+    background-color: black;
+    position: relative;
+}
+.bg_black_middle {
+    /*黑色背景区域中间存放两个鼠标悬浮跳出（js代码写）span标签的div部分*/
+    display: inline-block;
+    width: 85px;
+    height:41px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    margin-left: -42px;
+    margin-top: -20px;
+}
+.bg_black_middle .span_1 {
+    /*黑色背景区域中间两个鼠标悬浮跳（js代码写）的span标签部分*/
+    display: inline-block;
+    visibility: hidden;
+    width: 40px;
+    height: 41px;
+    margin-right: 5px;
+    background: #514a49 url("../Images/search.png") center no-repeat;
+}
+.bg_black_middle .span_2 {
+    /*黑色背景区域中间两个鼠标悬浮跳（js代码写）的span标签部分*/
+    display: inline-block;
+    visibility: hidden;
+    width: 40px;
+    height: 41px;
+    background: #514a49 url("../Images/link.png") center no-repeat;
+}
+.bg_black:hover {
+    /*黑色背景区域鼠标悬浮事件*/
+    background-color: #d7d7d7;
+}
+.exclusive_topics_bottom_1_text {
+    /*黑色背景区域下方存放文字的div部分*/
+    padding: 14px 0 15px;
+}
+.exclusive_topics_bottom_1_text h3 {
+    /*黑色背景区域下方存放文字的div里面的h3标签部分*/
+    font-size: 18px;
+    line-height:24px;
+    color: #1f1f1f;
+    margin-left: 14px;
+}
+.exclusive_topics_bottom_1_text p {
+    /*黑色背景区域下方存放文字的div里面的p标签部分*/
+    font-size: 12px;
+    line-height:25px;
+    color:#9f9f9f;
+    margin-left: 14px;
+}
+.exclusive_topics_bottom_1_text span {
+    /*黑色背景区域下方存放文字的div里面的p标签里面的span部分*/
+    color: #ff6e5b;
+}
+.bg_red {
+    /*黑色背景区域下方存放文字的div下方的红色背景条部分*/
+    height: 5px;
+    background-color: #ff5842;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*footer部分*/
+.footer_bg1 {
+    width: 100%;
+    background-color:#222f35 ;
+}
+#footer_top {
+    width: 1200px;
+    margin: auto;
+    padding:20px 0 40px 0;
+    background-color: #222f35;
+}
+#footer_top a {
+    color: #82a0ad;
+}
+.footer_top_left {
+    width: 368px;
+    float: left;
+}
+.company {
+     font-size: 24px;
+     color: white;
+    line-height:28px;
+    margin-bottom: 20px;
+ }
+.company_description {
+    color: #82a0ad;
+    font-size: 14px;
+    line-height: 21px;
+}
+.footer_top_right {
+    float: right;
+    width: 638px;
+    padding-bottom: 10px;
+}
+.support_1 {
+    float: left;
+    margin-right: 126px;
+}
+.downloads {
+    float: left;
+    margin-right: 143px;
+}
+.support_2 {
+    float: left;
+    margin-right: 65px;
+}
+dt {
+    font-size: 24px;
+    line-height:28px;
+    color: white;
+    margin-bottom: 20px;
+}
+dd {
+    font-size: 14px;
+    line-height:26px;
+    color: #829fad;
+}
+.footer_bg2 {
+    background-color: #172125 ;
+    width:100%;
+}
+#footer_bottom {
+    width:1200px;
+    margin:0 auto;
+    background-color: #172125;
+}
+#footer_bottom p {
+    display: inline-block;
+    font-size: 14px;
+    line-height:54px;
+    color: #82a0ad;
+    height: 54px;
+}
+#footer_bottom ul {
+    float: right;
+    padding:8px 0 9px 0;
+}
+#footer_bottom li {
+    float: left;
+    margin-left:2px;
+}

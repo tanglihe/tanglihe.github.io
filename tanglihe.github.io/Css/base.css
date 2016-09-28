@@ -16,6 +16,7 @@ ul,ol {
 img {
     border:0;
     vertical-align: top;
+    outline: none;    /*去除点击时产生的边框*/
 }
 body {
     font-size: 14px;
