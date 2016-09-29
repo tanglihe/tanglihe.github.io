@@ -132,32 +132,31 @@ header {
     height: 47px;
     padding: 0 20px;
     text-align: center;
-    border-right:1px #e9422c solid;
 }
 .nav li:hover {
+    /*导航条nav的li标签的鼠标悬浮事件部分*/
     background-color: #f24933;
 }
 .nav li a {
+    /*导航条nav的li标签的a标签部分*/
     color: white;
     display: inline-block;
     width: 100%;
     height:47px;
 }
 .nav li a:hover {
+    /*导航条nav的li标签的a标签悬浮事件部分*/
     background-color: #f24933;
 }
-.nav .last a {
-    /*导航条nav的最后一个li标签的追加属性部分*/
-    border-right: 0 none;
-}
 .nav span {
+    /*导航条nav的li标签里面的span部分*/
     display: inline-block;
     font-size: 27px;
     text-align: center;
-    color: blue;
+    color: #f24933;
     float: right;
     position: relative;
-    left:22px;
+    left:23px;
     top:-47px;
 }
 
@@ -166,6 +165,10 @@ header {
     margin:0 auto;
     width:1200px;
     background-color: lightsteelblue;
+}
+.exclusive_topics {
+    margin-bottom: 23px;
+    background-color: red;
 }
 .exclusive_topics_top {
     /*exclusive_topics区域左上方的文字部分*/
@@ -241,8 +244,8 @@ header {
 }
 .bg_black_middle .span_1 {
     /*黑色背景区域中间两个鼠标悬浮跳（js代码写）的span标签部分*/
-    display: inline-block;
-    visibility: hidden;
+    float: left;
+    visibility: visible;
     width: 40px;
     height: 41px;
     margin-right: 5px;
@@ -250,8 +253,8 @@ header {
 }
 .bg_black_middle .span_2 {
     /*黑色背景区域中间两个鼠标悬浮跳（js代码写）的span标签部分*/
-    display: inline-block;
-    visibility: hidden;
+    float: right;
+    visibility: visible;
     width: 40px;
     height: 41px;
     background: #514a49 url("../Images/link.png") center no-repeat;
@@ -287,6 +290,621 @@ header {
     height: 5px;
     background-color: #ff5842;
 }
+.body {
+    width: 1200px;
+    background: yellow;
+    margin: 0 auto;
+}
+.body_left {
+    width: 880px;
+    margin-right: 20px;
+    background-color: blue;
+    display: inline-block;
+}
+.hot_topics_logo {
+    margin-bottom: 20px;
+}
+.hot_topics_logo span {
+    display: inline-block;
+    height: 32px;
+    font-size: 24px;
+    line-height: 32px;
+    margin-left:10px;
+}
+#hotTopicsShow {
+    height: 405px;
+    width: 880px;
+    background-color: #d7d7d7;
+    position: relative;
+    margin-bottom: 20px;
+}
+#hotTopicsShow .text {
+    width: 572px;
+    height: 87px;
+    background-color: #2b2b2b;
+    padding:16px;
+    position: absolute;
+    left: 16px;
+    bottom: 15px;
+
+}
+#hotTopicsShow .text p{
+    font-size: 19px;
+    line-height: 27px;
+    color: #ffffff;
+}
+#hotTopicsShow .text span {
+    font-size: 16px;
+    line-height: 21px;
+    display: block;
+    color: #ffffff;
+}
+.turn_way {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+}
+.turn_way div {
+    height: 41px;
+    width:41px;
+    background-color: #404040;
+    color: #c6c6c6;
+    font-size: 21px;
+    line-height:41px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+
+}
+.bottom_red {
+    background-color: #ff5842;
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+    width: 880px;
+}
+.entertainment {
+    height: 32px;
+    background: red;
+    font-size: 24px;
+    line-height: 32px;
+    color:#1f1f1f;
+    margin-bottom:20px;
+}
+.entertainment_content {
+    background-color: #222f35;
+    margin-bottom: 20px;
+}
+.entertainment_content_left {
+    float: left;
+    width: 420px;
+    height: 422px;
+    background: red;
+    margin-right: 10px;
+    position: relative;
+}
+.entertainment_content_left_bg {
+    height: 190px;
+    background-color: #b4b4b4;
+    margin-bottom: 13px;
+}
+.entertainment_content_left_text {
+    padding: 0 16px;
+}
+.entertainment_content_left_text .p1 {
+    font-size: 18px;
+    line-height: 24px;
+    color:#3b3b3b;
+}
+.entertainment_content_left_text .p2 {
+    font-size: 12px;
+    line-height: 25px;
+    color: #9f9f9f;
+}
+.entertainment_content_left_text .p2 span {
+    color: #ff5842;
+}
+.entertainment_content_left_text li {
+    width: 15px;
+    height: 14px;
+    float: left;
+}
+.entertainment_content_left_text .li_1 {
+    background-image: url("../Images/yellowStar.png");
+}
+.entertainment_content_left_text .li_2 {
+    background-image: url("../Images/yellowStar.png");
+}
+.entertainment_content_left_text .li_3 {
+    background-image: url("../Images/grayStar.png");
+}
+.entertainment_content_left_text .li_4 {
+    background-image: url("../Images/grayStar.png");
+}
+.entertainment_content_left_text .li_5 {
+    background-image: url("../Images/grayStar.png");
+}
+.entertainment_content_left_text .p3 {
+    font-size: 14px;
+    line-height: 21px;
+    color: #777777;
+}
+.entertainment_content_left_text .p3 span {
+    color: #ff5842;
+}
+.entertainment_content_left_red_bg {
+    height: 5px;
+    width: 420px;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+}
+.entertainment_content_right {
+    float: right;
+    width: 450px;
+    height: 422px;
+    background: burlywood;
+}
+
+.entertainment_content_right_content {
+    width: 220px;
+    height: 205px;
+    background: gray;
+    float: left;
+}
+
+
+
+.blank_space_1 {
+    margin-right: 10px;
+}
+.blank_space_2 {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.blank_space_3 {
+    margin-top: 10px;
+}
+
+.entertainment_content_right_content_bg {
+    background-color: #b4b4b4;
+    width: 220px;
+    height: 99px;
+    margin-bottom: 10px;
+}
+.entertainment_content_right_text {
+    padding:0 10px;
+}
+.entertainment_content_right_text .p1 {
+    font-size: 16px;
+    line-height: 24px;
+    color: #1f1f1f;
+}
+.entertainment_content_right_text .p2 {
+    font-size: 12px;
+    line-height:18px;
+    color: #9f9f9f;
+    margin-bottom: 8px;
+}
+.entertainment_content_right_text .p2 span {
+    color: #ff5842;
+}
+.entertainment_content_right_text li {
+    width: 15px;
+    height: 14px;
+    float: left;
+}
+.entertainment_content_right_text .li_1 {
+    background-image: url("../Images/yellowStar.png");
+}
+.entertainment_content_right_text .li_2 {
+    background-image: url("../Images/yellowStar.png");
+}
+.entertainment_content_right_text .li_3 {
+    background-image: url("../Images/grayStar.png");
+}
+.entertainment_content_right_text .li_4 {
+    background-image: url("../Images/grayStar.png");
+}
+.entertainment_content_right_text .li_5 {
+    background-image: url("../Images/grayStar.png");
+}
+
+.technology {
+    height: 32px;
+    background-color: yellowgreen;
+    font-size: 24px;
+    line-height: 32px;
+    color: #1f1f1f;
+    margin-bottom: 20px;
+}
+.technology_total {
+    height: 683px;
+    width: 880px;
+    background-color: #82a0ad;
+    margin-bottom: 20px;
+}
+.technology_top {
+    width: 880px;
+    height: 296px;
+    background: pink;
+    margin-bottom: 10px;
+}
+.technology_top_content {
+    width: 433px;
+    height: 294px;
+    background-color: lemonchiffon;
+    border:1px #f8f8f8 solid;
+}
+.blank_space_a {
+    float: left;
+    margin-right: 10px;
+}
+.blank_space_b {
+    float: right;
+}
+.technology_top_content_bg {
+    height:190px;
+    width: 435px;
+    background-color: #b4b4b4;
+}
+.technology_top_content .p1 {
+    margin-top: 10px;
+    padding: 0 10px;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1f1f1f;
+}
+.technology_top_content .p2 {
+    padding: 0 10px;
+    font-size: 12px;
+    line-height: 25px;
+    color: #9f9f9f;
+    margin: 10px 0 4px;
+}
+.technology_top_content .p2 span {
+    color: #ff5842;
+}
+.technology_top_content li {
+    width: 15px;
+    height: 14px;
+    float: left;
+}
+.technology_top_content ul {
+    padding: 0 10px;
+}
+.technology_top_content .li_1 {
+    background-image: url("../Images/yellowStar.png");
+}
+.technology_top_content .li_2 {
+    background-image: url("../Images/yellowStar.png");
+}
+.technology_top_content .li_3 {
+    background-image: url("../Images/grayStar.png");
+}
+.technology_top_content .li_4 {
+    background-image: url("../Images/grayStar.png");
+}
+.technology_top_content .li_5 {
+    background-image: url("../Images/grayStar.png");
+}
+
+
+.technology_bottom {
+    width: 880px;
+    height: 377px;
+    background-color: red;
+}
+.technology_bottom_content {
+    width: 286px;
+    height: 377px;
+    background-color: blue;
+    float: left;
+}
+.technology_bottom_content_bg {
+    height: 129px;
+    background-color: #b4b4b4;
+}
+.technology_bottom_content_text .p1 {
+    font-size: 18px;
+    color: #1f1f1f;
+    margin:10px 0 20px 10px;
+}
+.technology_bottom_content_text .p2 {
+    font-size: 12px;
+    color: #9f9f9f;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.technology_bottom_content_text .p2 span {
+    color: #ff5842;
+}
+.technology_bottom_content li {
+    width: 15px;
+    height: 14px;
+    float: left;
+}
+.technology_bottom_content ul {
+    padding: 0 10px;
+}
+.technology_bottom_content .li_1 {
+    background-image: url("../Images/yellowStar.png");
+}
+.technology_bottom_content .li_2 {
+    background-image: url("../Images/yellowStar.png");
+}
+.technology_bottom_content .li_3 {
+    background-image: url("../Images/grayStar.png");
+}
+.technology_bottom_content .li_4 {
+    background-image: url("../Images/grayStar.png");
+}
+.technology_bottom_content .li_5 {
+    background-image: url("../Images/grayStar.png");
+}
+.technology_bottom_content_text .p3 {
+    font-size: 14px;
+    padding-top: 10px;
+    margin:10px 10px 0 10px;
+    border-top:1px #f8f8f8 solid;
+}
+.technology_bottom_content_text .p3 span {
+    color: #ff5842;
+}
+.blank_space_A {
+    margin-right: 11px;
+}
+
+
+
+.environment {
+    border:1px #f8f8f8 solid;
+}
+.environment_top {
+    height: 41px;
+    margin-bottom: 20px;
+}
+.environment_top_left {
+    padding:5px 0 4px;
+    height: 32px;
+    float: left;
+    font-size: 24px;
+    color: #1f1f1f;
+}
+.environment_top_right {
+    float: right;
+}
+.environment_top_right .turn {
+    height: 41px;
+    width: 85px;
+    background-color: lightcoral;
+}
+.environment_top_right div {
+    width: 41px;
+    height: 41px;
+    background-color: #eeeeee;
+    float: left;
+    font-size: 30px;
+    text-align: center;
+    line-height:41px;
+    color: #686868;
+}
+.environment_top_right .right {
+    margin-left: 3px;
+}
+.environment_top_bg {
+    width: 880px;
+    height: 398px;
+    background-color: #b4b4b4;
+}
+.environment .p1 {
+    color: #1f1f1f;
+    font-size: 18px;
+    margin: 22px 0 16px 10px;
+}
+.environment .p2 {
+    color: #9f9f9f;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-bottom: 12px;
+}
+.environment .p2 span {
+    color: #ff5842;
+}
+.environment li {
+    width: 15px;
+    height: 14px;
+    float: left;
+}
+.environment ul {
+    padding: 0 10px;
+}
+.environment .li_1 {
+    background-image: url("../Images/yellowStar.png");
+}
+.environment .li_2 {
+    background-image: url("../Images/yellowStar.png");
+}
+.environment .li_3 {
+    background-image: url("../Images/grayStar.png");
+}
+.environment .li_4 {
+    background-image: url("../Images/grayStar.png");
+}
+.environment .li_5 {
+    background-image: url("../Images/grayStar.png");
+}
+.environment .p3 {
+    padding: 10px;
+    font-size: 14px;
+    color: #777777;
+    margin: 10px;
+    border-top: 1px #f8f8f8 solid;
+}
+.environment_bottom {
+    width: 880px;
+    background: darkcyan;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.environment_bottom_content {
+    width: 435px;
+    background-color: red;
+    height: 90px;
+    padding-bottom: 10px;
+    float: left;
+}
+.environment_bottom_content_bg {
+    background-color: #c3c3c3;
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
+    float: left;
+}
+.environment_bottom .p1 {
+    color: #1f1f1f;
+    font-size: 16px;
+}
+.environment_bottom .p2 {
+    font-size: 12px;
+    color: #9f9f9f;
+    margin-top: 12px;
+}
+.environment_bottom .p2 {
+    color: #ff5842;
+}
+.blank_space_left {
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.body_right {
+    width: 300px;
+    background: lemonchiffon;
+    display: inline-block;
+    float: right;
+}
+.follow_us_logo {
+    height: 32px;
+    background: lightcoral;
+    font-size: 24px;
+    color: #1f1f1f;
+    margin-bottom: 20px;
+}
+.follow_us {
+    width: 300px;
+    background: gray;
+    height: 145px;
+}
+.follow_us_img {
+    background: red;
+    height: 45px;
+    width: 45px;
+    float: left;
+}
+.space_1 {
+    margin-right: 6px;
+}
+.space_2 {
+    margin-bottom: 5px;
+}
+.Categories_list {
+    height: 32px;
+    background: lightcoral;
+    font-size: 24px;
+    color: #1f1f1f;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.Categories_list_nav_content {
+    width: 149px;
+    height: 38px;
+    background: #f6f6f6;
+    color: #aeaeae;
+    float: left;
+    text-align: center;
+    line-height: 38px;
+    font-size: 14px;
+}
+.Categories_list_nav_content a {
+    display: inline-block;
+    width: 149px;
+    height: 38px;
+}
+.Categories_list_nav_content a:hover {
+    color: #ffffff;
+    background-color: #ff5842;
+}
+.space_a {
+    margin-right: 2px;
+}
+.space_b {
+    margin-bottom: 2px;
+}
+.advertising {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 32px;
+    background-color: red;
+    line-height: 32px;
+    font-size: 24px;
+}
+.advertising_bg {
+    width: 300px;
+    height: 250px;
+    background-color: #ececec;
+    margin-bottom: 20px;
+}
+.list {
+    height: 47px;
+    border-top: 5px #f24933 solid;
+}
+.list a {
+    height: 21px;
+    width: 100px;
+    float: left;
+    padding:13px 0;
+    display: inline-block;
+    background: #ff5842;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+}
+.list a:hover {
+    background-color: #f24933;
+}
+.list span {
+    display: inline-block;
+    height: 21px;
+    width: 100px;
+    border-right: 1px #f24933 solid;
+}
+
+
+
+
 
 
 
