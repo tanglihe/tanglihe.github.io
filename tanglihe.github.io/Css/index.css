@@ -164,11 +164,9 @@ header {
     /*body整个区域*/
     margin:0 auto;
     width:1200px;
-    background-color: lightsteelblue;
 }
 .exclusive_topics {
     margin-bottom: 23px;
-    background-color: red;
 }
 .exclusive_topics_top {
     /*exclusive_topics区域左上方的文字部分*/
@@ -200,7 +198,7 @@ header {
     background-color: #f5f5f5;
     color: #a4a4a4;
     display: inline-block;
-    font-size: 21px;
+    font-size: 30px;
     line-height: 41px;
     text-align: center;
 }
@@ -292,13 +290,11 @@ header {
 }
 .body {
     width: 1200px;
-    background: yellow;
     margin: 0 auto;
 }
 .body_left {
     width: 880px;
     margin-right: 20px;
-    background-color: blue;
     display: inline-block;
 }
 .hot_topics_logo {
@@ -365,21 +361,19 @@ header {
 }
 .entertainment {
     height: 32px;
-    background: red;
     font-size: 24px;
     line-height: 32px;
     color:#1f1f1f;
     margin-bottom:20px;
 }
 .entertainment_content {
-    background-color: #222f35;
     margin-bottom: 20px;
 }
 .entertainment_content_left {
     float: left;
     width: 420px;
     height: 422px;
-    background: red;
+
     margin-right: 10px;
     position: relative;
 }
@@ -435,7 +429,7 @@ header {
 .entertainment_content_left_red_bg {
     height: 5px;
     width: 420px;
-    background-color: #000;
+    background-color: #ff5842;
     position: absolute;
     bottom: 0;
 }
@@ -443,13 +437,11 @@ header {
     float: right;
     width: 450px;
     height: 422px;
-    background: burlywood;
 }
 
 .entertainment_content_right_content {
     width: 220px;
     height: 205px;
-    background: gray;
     float: left;
 }
 
@@ -512,7 +504,6 @@ header {
 
 .technology {
     height: 32px;
-    background-color: yellowgreen;
     font-size: 24px;
     line-height: 32px;
     color: #1f1f1f;
@@ -521,19 +512,17 @@ header {
 .technology_total {
     height: 683px;
     width: 880px;
-    background-color: #82a0ad;
     margin-bottom: 20px;
 }
 .technology_top {
     width: 880px;
     height: 296px;
-    background: pink;
     margin-bottom: 10px;
 }
 .technology_top_content {
     width: 433px;
     height: 294px;
-    background-color: lemonchiffon;
+
     border:1px #f8f8f8 solid;
 }
 .blank_space_a {
@@ -593,12 +582,10 @@ header {
 .technology_bottom {
     width: 880px;
     height: 377px;
-    background-color: red;
 }
 .technology_bottom_content {
     width: 286px;
     height: 377px;
-    background-color: blue;
     float: left;
 }
 .technology_bottom_content_bg {
@@ -677,9 +664,8 @@ header {
 .environment_top_right .turn {
     height: 41px;
     width: 85px;
-    background-color: lightcoral;
 }
-.environment_top_right div {
+.environment_top_right div div {
     width: 41px;
     height: 41px;
     background-color: #eeeeee;
@@ -693,7 +679,7 @@ header {
     margin-left: 3px;
 }
 .environment_top_bg {
-    width: 880px;
+    width: 878px;
     height: 398px;
     background-color: #b4b4b4;
 }
@@ -743,13 +729,11 @@ header {
 }
 .environment_bottom {
     width: 880px;
-    background: darkcyan;
     margin-bottom: 20px;
     margin-top: 10px;
 }
 .environment_bottom_content {
     width: 435px;
-    background-color: red;
     height: 90px;
     padding-bottom: 10px;
     float: left;
@@ -770,7 +754,7 @@ header {
     color: #9f9f9f;
     margin-top: 12px;
 }
-.environment_bottom .p2 {
+.environment_bottom .p2 span {
     color: #ff5842;
 }
 .blank_space_left {
@@ -802,24 +786,21 @@ header {
 
 .body_right {
     width: 300px;
-    background: lemonchiffon;
     display: inline-block;
     float: right;
 }
 .follow_us_logo {
     height: 32px;
-    background: lightcoral;
     font-size: 24px;
     color: #1f1f1f;
     margin-bottom: 20px;
 }
 .follow_us {
     width: 300px;
-    background: gray;
     height: 145px;
 }
 .follow_us_img {
-    background: red;
+    background-color: indianred;
     height: 45px;
     width: 45px;
     float: left;
@@ -832,7 +813,7 @@ header {
 }
 .Categories_list {
     height: 32px;
-    background: lightcoral;
+
     font-size: 24px;
     color: #1f1f1f;
     margin-top: 20px;
@@ -867,7 +848,6 @@ header {
     margin-top: 20px;
     margin-bottom: 20px;
     height: 32px;
-    background-color: red;
     line-height: 32px;
     font-size: 24px;
 }
@@ -881,46 +861,170 @@ header {
     height: 47px;
     border-top: 5px #f24933 solid;
 }
-.list a {
-    height: 21px;
-    width: 100px;
+.list div {
     float: left;
-    padding:13px 0;
+    width: 100px;
+    height: 21px;
+    padding: 13px 0;
+    background-color: #ff5842;
+    cursor: pointer;
+}
+.list div a {
+    height: 21px;
+    width: 99px;
+    float: left;
     display: inline-block;
-    background: #ff5842;
     font-size: 16px;
     line-height: 21px;
     text-align: center;
+    border-right: 1px #f24933 solid;
+}
+.list div .last {
+    border: 0 ;
 }
 .list a:hover {
     background-color: #f24933;
 }
-.list span {
-    display: inline-block;
-    height: 21px;
-    width: 100px;
-    border-right: 1px #f24933 solid;
+.list div:hover {
+    background-color: #f24933;
+}
+.living_abroad {
+    width: 276px;
+    border:1px #f8f8f8 solid;
+    border-top: 0;
+    padding: 0 11px;
+}
+.living_abroad_show {
+    margin: 10px 0;
+    border-bottom: 1px #f8f8f8 solid;
+
+}
+.living_abroad_bg {
+    width: 90px;
+    height: 90px;
+    background-color: #c3c3c3;
+    margin-right: 10px;
+    float: left;
+}
+.living_abroad_show .p1 {
+    font-size: 16px;
+    color: #1f1f1f;
+    margin-bottom: 10px;
+}
+.living_abroad_show .p2 {
+    font-size: 12px;
+    color: #9f9f9f;
+}
+.living_abroad_show .p2 span {
+    color: #ff5842;
+}
+.tags {
+    height: 32px;
+    margin:20px 0;
+    color: #1f1f1f;
+    font-size: 24px;
+    line-height: 32px;
 }
 
+.tags_list .first,.tags_list .third {
+    height: 37px;
 
+}
+.tags_list .second {
+     height: 37px;
+     margin: 2px 0;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ }
+.tags_list span {
+    padding: 0 10px;
+    height: 37px;
+    background-color: #f6f6f6;
+    margin-right: 2px;
+    display: inline-block;
+    float: left;
+    line-height: 37px;
+    font-size: 14px;
+    color: #8f8f8f;
+}
+.tags_list span:hover {
+    background-color: #ff5842;
+    color: #ffffff;
+    cursor: pointer;
+}
+.featured_videos {
+    height: 32px;
+    margin:20px 0;
+    color: #1f1f1f;
+    font-size: 24px;
+    line-height: 32px;
+}
+.twitter {
+    height: 32px;
+    margin:20px 0;
+    color: #1f1f1f;
+    font-size: 24px;
+    line-height: 32px;
+}
+.twitter_list div {
+    margin-bottom: 2px;
+    background-color: #f6f6f6;
+    height: 52px;
+    width: 300px;
+}
+.twitter_list .photo {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    float: left;
+    margin:6px 0;
+}
+.twitter_list p {
+    font-size: 12px;
+    color: #8f8f8f;
+    line-height: 16px;
+    float: left;
+    padding-top: 10px;
+    margin-left: 10px;
+}
+.twitter_list div:hover {
+    background-color: #50b4e6;
+    border:1px #42a7d9 solid;
+}
+.news_letter {
+    height: 32px;
+    margin: 20px 0;
+    color: #1f1f1f;
+    font-size: 24px;
+    line-height: 32px;
+}
+.news_letter_p {
+    margin-bottom: 10px;
+    width: 300px;
+    font-size: 16px;
+}
+.new_letter_sear {
+    width: 300px;
+    height: 43px;
+    margin-left: -13px;
+    float: right;
+}
+.new_letter_sear .txt {
+    border: 1px #dcdcdc solid;
+    border-right: 0 none;
+    height: 41px;
+    width: 209px;
+    outline: none;
+}
+.new_letter_sear .sub {
+    width: 90px;
+    text-align: center;
+    line-height: 43px;
+    background-color: #ff5842;
+    border:0 none;
+    float: right;
+    color: white;
+    outline: none;
+}
 
 
 
