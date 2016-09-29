@@ -175,7 +175,7 @@ header {
 }
 .content_left {
     /*exclusive_topics区域左上方的存放文字和图片的div标签部分*/
-    width: 300px;
+    width: 1200px;
     display: inline-block;
     padding-top: 5px;
 }
@@ -296,6 +296,7 @@ header {
     width: 880px;
     margin-right: 20px;
     display: inline-block;
+    float: left;
 }
 .hot_topics_logo {
     margin-bottom: 20px;
