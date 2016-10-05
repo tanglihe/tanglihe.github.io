@@ -315,7 +315,21 @@ header {
     background-color: #d7d7d7;
     position: relative;
     margin-bottom: 20px;
+    overflow: hidden;
     cursor: pointer;
+}
+#hotTopicsShow ul{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 4400px;
+    height: 405px;
+}
+#hotTopicsShow li {
+    float: left;
+    position: relative;
+    width: 880px;
+    height: 405px;
 }
 #hotTopicsShow .text {
     width: 572px;
@@ -328,12 +342,12 @@ header {
     cursor: pointer;
 
 }
-#hotTopicsShow .text p a{
+#hotTopicsShow .text p {
     font-size: 19px;
     line-height: 27px;
     color: #ffffff;
 }
-#hotTopicsShow .text span a {
+#hotTopicsShow .text span{
     font-size: 16px;
     line-height: 21px;
     display: block;
@@ -1011,9 +1025,9 @@ header {
 
 }
 .tags_list .second {
-    margin: 2px 0;
+     margin: 2px 0;
 
-}
+ }
 .tags_list a {
     padding: 0 10px;
     height: 37px;
@@ -1049,20 +1063,13 @@ header {
     background-color: #f6f6f6;
     height: 52px;
     width: 300px;
+    border:1px #f6f6f6 solid;
 }
 .twitter_list img {
     float: left;
     margin-top: 5px;
     margin-left: 5px;
 }
-/*.twitter_list .photo {*/
-/*width: 45px;*/
-/*height: 45px;*/
-
-/*float: left;*/
-/*margin:3px 0 4px;*/
-/*cursor: pointer;*/
-/*}*/
 .twitter_list p {
     font-size: 12px;
     color: #8f8f8f;
@@ -1132,11 +1139,11 @@ header {
     float: left;
 }
 .company {
-    font-size: 24px;
-    color: white;
+     font-size: 24px;
+     color: white;
     line-height:28px;
     margin-bottom: 20px;
-}
+ }
 .company_description {
     color: #82a0ad;
     font-size: 14px;

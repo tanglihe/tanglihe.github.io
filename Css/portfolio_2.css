@@ -162,7 +162,7 @@ header {
 
 .body {
     /*body整个区域*/
-    margin:0 auto;
+    margin:0 auto 30px;
     width:1200px;
 }
 .body_left {
@@ -493,6 +493,7 @@ header {
     background-color: #f6f6f6;
     height: 52px;
     width: 300px;
+    border:1px #f6f6f6 solid;
 }
 .twitter_list img {
     float: left;

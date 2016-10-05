@@ -2,6 +2,46 @@
   * Created by Administrator on 2016/9/30.
   */
  window.onload=function () {
+     //hot topics轮播部分
+     var hotTopic = $('hotTopicsShow');
+     var hotUl = hotTopic.getElementsByTagName('ul')[0];//集合
+     var hotLi = hotTopic.getElementsByTagName('li');
+     var hotLen = hotLi.length;
+     var cur = 0;
+     var timer;
+     timer=setInterval(function () {
+         cur++;
+         animate(hotUl,{left:-880*cur}, function () {
+             if(cur==hotLen-1){
+                 cur=0;
+                 hotUl.style.left=0;
+             }
+         })
+     },4000);
+
+     hotTopic.onmouseover= function () {
+         clearInterval(timer);
+     };
+     hotTopic.onmouseout= function () {
+         clearInterval(timer);
+         timer=setInterval(function () {
+             cur++;
+             animate(hotUl,{left:-880*cur}, function () {
+                 if(cur==hotLen-1){
+                     cur=0;
+                     hotUl.style.left=0;
+                 }
+             })
+         },4000);
+     };
+
+
+
+
+
+
+
+
      var blackFirst = $('blackBgFirst');
      var blackFirstMiddle = blackFirst.getElementsByTagName('div'); //集合
      blackFirst.onmouseover=function () {
@@ -48,16 +88,7 @@
                  }
              }
          }
-
      }
 
 
  };
-
-//var s=0;
-//for(i=0;i<5;i++){
-//    s+=i;
-//    alert(s);
-//    i++;
-//}
-//alert(s);

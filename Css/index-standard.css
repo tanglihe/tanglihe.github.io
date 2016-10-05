@@ -290,28 +290,43 @@ header {
     color: #686868;
     background-color: #eeeeee;
 }
-.store_content {
-    width: 4800px;
+#storeContent {
+    margin:0 auto;
+    background: red;
+    width: 1200px;
+    height: 390px;
+    overflow: hidden;
+    position: relative;
+    top:0;
+    left:0;
+}
+#storeContent ul {
+    background: blue;
+    width: 6000px;
     height: 390px;
     border-bottom: 1px #e6e6e6 solid;
+    position: absolute;
+    top:0;
+    left:0;
 }
-.store_content_show {
+#storeContent li {
     float: left;
     width: 283px;
     height: 368px;
     border:1px #f8f8f8 solid;
+    position: relative;
 }
-.store_content .spacing{
+#storeContent .spacing{
     margin-right: 20px;
 }
-.store_content_show:hover {
+#storeContent li:hover {
     border:1px #ededed solid;
 }
-.store_content_show .bg {
+#storeContent .bg {
     width: 283px;
     height: 268px;
 }
-.store_content_show .message {
+#storeContent .message {
     width: 283px;
     height: 100px;
     background-color: #f8f8f8;

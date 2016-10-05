@@ -520,6 +520,7 @@ textarea {
     background-color: #f6f6f6;
     height: 52px;
     width: 300px;
+    border:1px #f6f6f6 solid;
 }
 .twitter_list img {
     float: left;

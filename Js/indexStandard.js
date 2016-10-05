@@ -9,6 +9,31 @@ window.onload= function () {
         black.style.display='none';
     };
 
+    //store轮播部分
+    var storeContent = $('storeContent');
+    var storeUl = storeContent.getElementsByTagName('ul')[0]; //集合
+    var storeLi = storeContent.getElementsByTagName('li');
+    var storeLen = storeLi.length;
+    var storeLenTrue = storeLen/4;
+    var cur=0;
+    var timer;
+    //timer=setInterval(function () {
+    //    cur++;
+    //    animate(storeUl,{left:-1200*cur}, function () {
+    //        if(cur==storeLenTrue-1){
+    //            cur=0;
+    //            storeUl.style.left=0;
+    //        }
+    //    })
+    //},1000);
+
+
+
+
+
+
+
+
 
     //recent project 的选项卡部分----------------------------------------------------------------------------------
     var navProject = $('recentProjectNav');

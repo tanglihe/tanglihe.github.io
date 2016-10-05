@@ -175,16 +175,35 @@ header {
     margin-top: 30px;
     cursor: pointer;
 }
-.turn {
-    margin:10px auto 0;
+.post_last {
+    margin-top: 20px;
+    width: 880px;
+    height: 405px;
+    background-color: blue;
+    position: relative;
+    overflow: hidden;
 }
 .turn_1 {
-    float: left;
+   position: absolute;
+    left:0;
+    cursor: pointer;
 }
 .turn_2 {
-    float: right;
+    position: absolute;
+    right:0;
+    cursor: pointer;
 }
-
+.post_last ul {
+    width: 4400px;
+    height: 405px;
+    position: absolute;
+    left:0;
+}
+.post_last li {
+    width: 880px;
+    height: 405px;
+    float: left;
+}
 
 
 
@@ -459,6 +478,7 @@ header {
     background-color: #f6f6f6;
     height: 52px;
     width: 300px;
+    border:1px #f6f6f6 solid;
 }
 .twitter_list img {
     float: left;
