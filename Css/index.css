@@ -408,6 +408,12 @@ header {
     height: 190px;
     background-color: #b4b4b4;
     margin-bottom: 13px;
+    position: relative;
+}
+.sticky {
+    position:absolute;
+    top:0;
+    left:0;
 }
 .entertainment_content_left_text {
     padding: 0 16px;
