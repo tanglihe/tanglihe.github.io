@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="Css/base.css">
+    <style>
+        .info {
+            width: 1200px;
+            height: 390px;
+            position: relative;
+            background-color: black;
+            margin:100px auto 0;
+            overflow: hidden;
+        }
+        ul {
+            width: 6000px;
+            height: 390px;
+            position: absolute;
+            left:0;
+        }
+        li {
+            width: 270px;
+            height: 390px;
+            float: left;
+        }
+        .spacing {
+            margin-right: 40px;
+        }
+        #environment {
+            width: 878px;
+            height: 398px;
+            background-color: #b4b4b4;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+        }
+        #environment ul {
+            width: 4400px;
+            height: 398px;
+            background-color: red;
+            position: absolute;
+            left:0;
+        }
+        #environment li {
+            width: 878px;
+            height: 398px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div id="info" class="info">
+    <!--<ul id="ul" class="cf">-->
+        <!--<li style="background-color: red" class="spacing"></li>-->
+        <!--<li style="background-color: red" class="spacing"></li>-->
+        <!--<li style="background-color: red" class="spacing"></li>-->
+        <!--<li style="background-color: red"></li>-->
+
+        <!--<li style="background-color: blue" class="spacing"></li>-->
+        <!--<li style="background-color: blue" class="spacing"></li>-->
+        <!--<li style="background-color: blue" class="spacing"></li>-->
+        <!--<li style="background-color: blue"></li>-->
+
+        <!--<li style="background-color: gray" class="spacing"></li>-->
+        <!--<li style="background-color: gray" class="spacing"></li>-->
+        <!--<li style="background-color: gray" class="spacing"></li>-->
+        <!--<li style="background-color: gray"></li>-->
+
+        <!--<li style="background-color: pink" class="spacing"></li>-->
+        <!--<li style="background-color: pink" class="spacing"></li>-->
+        <!--<li style="background-color: pink" class="spacing"></li>-->
+        <!--<li style="background-color: pink"></li>-->
+
+        <!--<li style="background-color: red" class="spacing"></li>-->
+        <!--<li style="background-color: red" class="spacing"></li>-->
+        <!--<li style="background-color: red" class="spacing"></li>-->
+        <!--<li style="background-color: red"></li>-->
+    <!--</ul>-->
+    <div id="environment" class="environment_top_bg cf">
+        <ul>
+            <li>
+                <img src="Images/environment01.png" alt="加载失败">
+            </li>
+            <li>
+                <img src="Images/environment02.png" alt="加载失败">
+            </li>
+            <li>
+                <img src="Images/environment03.png" alt="加载失败">
+            </li>
+            <li>
+                <img src="Images/environment04.png" alt="加载失败">
+            </li>
+            <li>
+                <img src="Images/environment01.png" alt="加载失败">
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="Js/common.js"></script>
+<script>
+    window.onload=function () {
+//        var info = $('info');
+//        var ul = $('ul');
+//        var allLi = ul.getElementsByTagName('li');//集合   20；
+//        var len =allLi.length/4;
+//        var cur=0;
+//        var timer;
+//        setInterval(function () {
+//            cur++;
+//            animate(ul,{left:-1200*cur},function () {
+//                if(cur==len-1){
+//                    cur=0;
+//                    ul.style.left=0
+//                }
+//            })
+//        },2000)
+
+
+        var environment = $('environment');
+        var environmentUl = environment.getElementsByTagName('ul')[0];//集合
+        var environmentLi = environment.getElementsByTagName('li');
+        var environmentLen = environmentLi.length;
+        var cur = 0;
+        var timer;
+        timer=setInterval(function () {
+            cur++;
+            animate(environmentUl,{left:-878*cur}, function () {
+                if(cur==environmentLen-1){
+                    cur=0;
+                    environmentUl.style.left=0;
+                }
+            })
+        },2000);
+    }
+</script>
+</body>
+</html>

@@ -208,21 +208,30 @@ header {
     color: #686868;
     background-color: #eeeeee;
 }
-.exclusive_topics_bottom_1 {
-    /*exclusive_topics区域下方的存黑色背景、文字和红色背景条的div部分*/
+#exclusive {
+    width: 1200px;
+    height: 327px;
+    overflow: hidden;
+    position: relative;
+}
+#exclusive ul {
+    width: 6000px;
+    height: 327px;
+    position: absolute;
+    left:0;
+}
+#exclusive li {
+    float: left;
     width: 386px;
     height: 327px;
     border:1px #f8f8f8 solid;
-    float: left;
+}
+#exclusive .spacing {
     margin-right: 18px;
 }
-.exclusive_topics_bottom_2 {
-    /*exclusive_topics区域下方的存黑色背景、文字和红色背景条的div部分*/
-    width: 386px;
-    height: 327px;
-    border:1px #f8f8f8 solid;
-    float: left;
-}
+
+
+
 .bg_black {
     /*黑色背景区域部分*/
     width: 386px;
@@ -696,11 +705,25 @@ header {
 .environment_top_right .right {
     margin-left: 3px;
 }
-.environment_top_bg {
+#environment {
     width: 878px;
     height: 398px;
     background-color: #b4b4b4;
     cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+#environment ul {
+    width: 4400px;
+    height: 398px;
+    background-color: red;
+    position: absolute;
+    left:0;
+}
+#environment li {
+    width: 878px;
+    height: 398px;
+    float: left;
 }
 .environment .p1 {
     color: #1f1f1f;
@@ -720,9 +743,6 @@ header {
     width: 15px;
     height: 14px;
     float: left;
-}
-.environment ul {
-    padding: 0 10px;
 }
 .environment .li_1 {
     background-image: url("../Images/yellowStar.png");
@@ -1060,10 +1080,10 @@ header {
 }
 .twitter_list div {
     margin-bottom: 2px;
-    background-color: #f6f6f6;
     height: 52px;
     width: 300px;
     border:1px #f6f6f6 solid;
+    background:#f6f6f6 url("../Images/twitter-gray.png") 5px 5px no-repeat;
 }
 .twitter_list img {
     float: left;
@@ -1071,6 +1091,8 @@ header {
     margin-left: 5px;
 }
 .twitter_list p {
+    position: relative;
+    left: 45px;
     font-size: 12px;
     color: #8f8f8f;
     line-height: 16px;
@@ -1079,8 +1101,8 @@ header {
     margin-left: 10px;
 }
 .twitter_list div:hover {
-    background-color: #50b4e6;
     border:1px #42a7d9 solid;
+    background: #50b4e6 url("../Images/whiteBird.png") 5px 5px no-repeat;
 }
 .news_letter {
     height: 32px;
