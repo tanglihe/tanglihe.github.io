@@ -225,10 +225,9 @@ header {
     width: 386px;
     height: 327px;
     border:1px #f8f8f8 solid;
+    margin-right: 21px;
 }
-#exclusive .spacing {
-    margin-right: 18px;
-}
+
 
 
 
@@ -327,29 +326,41 @@ header {
     overflow: hidden;
     cursor: pointer;
 }
-#hotTopicsShow ul{
+#firstUl {
     position: absolute;
     left:0;
     top:0;
     width: 4400px;
     height: 405px;
 }
-#hotTopicsShow li {
+#firstUl li {
     float: left;
     position: relative;
     width: 880px;
     height: 405px;
 }
-#hotTopicsShow .text {
-    width: 572px;
-    height: 87px;
-    background-color: #2b2b2b;
-    padding:16px;
+#textTotal {
+    width: 604px;
+    height: 119px;
     position: absolute;
     left: 16px;
     bottom: 15px;
     cursor: pointer;
-
+    overflow: hidden;
+}
+#secondUl {
+    width: 604px;
+    height: 595px;
+    position: absolute;
+    top:0;
+    cursor: pointer;
+    background:rgba(0,0,0,.8);
+}
+#secondUl li {
+    width: 572px;
+    height: 87px;
+    padding:16px;
+    cursor: pointer;
 }
 #hotTopicsShow .text p {
     font-size: 19px;
