@@ -8,7 +8,6 @@
      var exclusiveLi = exclusive.getElementsByTagName('li');
      var exclusiveLen = exclusiveLi.length;
      var exclusiveCur = 0;
-     var exclusiveTimer;
      var exclusiveLeft = $('exclusiveLeft');
      var exclusiveRight = $('exclusiveRight');
 

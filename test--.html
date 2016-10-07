@@ -41,6 +41,7 @@
             top:50%;
             margin-top: -50px;
             background:rgba(0,0,0,.5);
+            cursor: pointer;
         }
       #right {
           width: 40px;
@@ -54,6 +55,7 @@
           top:50%;
           margin-top: -50px;
           background:rgba(0,0,0,.5);
+          cursor: pointer;
       }
     </style>
 </head>
@@ -68,9 +70,6 @@
             <li style="background-color: black"></li>
             <li style="background-color: gray"></li>
             <li style="background-color: green"></li>
-            <li style="background-color: red"></li>
-            <li style="background-color: pink"></li>
-            <li style="background-color: blue"></li>
         </ul>
     </div>
 <script src="Js/common.js"></script>
@@ -78,11 +77,26 @@
         var total = $('total');
         var ul = total.getElementsByTagName('ul')[0];
         var li = total.getElementsByTagName('li');
+//        克隆前三个li标签，并将其添加入ul中
+        for(var i = 0; i < 3; i++) {
+            ul.appendChild(li[i].cloneNode(true));
+        }
         var len = li.length;
         var timer;
         var cur=0;
         var left = $('left');
         var right = $('right');
+//页面加载完自动滚动
+        timer=setInterval(function () {
+            cur++;
+            if(cur==len-2){
+                cur=1;
+                ul.style.left=0;
+            }
+            animate(ul,{left:-410*cur})
+        },1000);
+
+//        点击向右滚动
         right.onclick = function () {
             cur++;
             if(cur == len-2) {
@@ -90,8 +104,8 @@
                 ul.style.left = 0;
             }
             animate(ul, {left:-410 * cur});
-
         };
+//        点击向左滚动
         left.onclick=function () {
             cur--;
             if(cur==-1){
@@ -100,8 +114,22 @@
                 ul.style.left=sum;
             }
             animate(ul,{left:-410*cur});
+        };
+//      鼠标悬浮停止移动
+        total.onmouseover=function () {
+            clearInterval(timer);
+        };
+//        鼠标移出继续滚动
+        total.onmouseout=function () {
+            timer=setInterval(function () {
+                cur++;
+                if(cur==len-2){
+                    cur=1;
+                    ul.style.left=0;
+                }
+                animate(ul,{left:-410*cur})
+            },1000)
         }
-
     </script>
 </body>
 </html>
