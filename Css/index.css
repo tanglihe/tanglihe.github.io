@@ -354,7 +354,7 @@ header {
     position: absolute;
     top:0;
     cursor: pointer;
-    background:rgba(0,0,0,.8);
+    background:#2a2c2b;
 }
 #secondUl li {
     width: 572px;
@@ -692,6 +692,7 @@ header {
     border:1px #f8f8f8 solid;
 }
 .environment_top {
+    padding-top: 20px;
     height: 41px;
     margin-bottom: 20px;
 }
@@ -704,6 +705,7 @@ header {
 }
 .environment_top_right {
     float: right;
+    cursor: pointer;
 }
 .environment_top_right .turn {
     height: 41px;
@@ -851,6 +853,7 @@ header {
     font-size: 24px;
     color: #1f1f1f;
     margin-bottom: 20px;
+
 }
 .follow_us {
     width: 300px;

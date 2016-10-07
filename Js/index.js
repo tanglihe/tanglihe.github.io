@@ -211,8 +211,8 @@
      };
 
      // Advertising选项卡部分
-     var list = document.getElementById('list').getElementsByTagName('div');
-     var livingAbroad = document.getElementById('livingAbroad');
+     var list = $('list').getElementsByTagName('div');
+     var livingAbroad = $('livingAbroad');
      var son = document.getElementsByClassName('list_son');
      var len = son.length;
      for(var i=0;i<len;i++){

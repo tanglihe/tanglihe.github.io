@@ -9,32 +9,58 @@
      var postLen = postLi.length;
      var cur = 0;
      var timer;
+     var lastLeft = $('lastLeft');
+     var lastRight = $('lastRight');
+     // 自动滚动
      timer = setInterval(function () {
          cur++;
-         animate(postUl, {left: -880 * cur}, function () {
-             if (cur == postLen - 1) {
-                 cur = 0;
-                 postUl.style.left = 0;
-             }
-         })
-     }, 4000);
-
+         if(cur==postLen){
+             cur=1;
+             postUl.style.left=0;
+         }
+         animate(postUl,{left:-cur*880})
+     }, 3000);
+     // 左击
+     lastLeft.onclick=function () {
+         cur--;
+         if(cur==-1){
+             cur=postLen-2;
+             var sum=-(postLen-1)*880 + 'px';
+             postUl.style.left=sum;
+         }
+         animate(postUl,{left:-cur*880})
+     };
+     // 右击
+     lastRight.onclick=function () {
+         cur++;
+         if(cur==postLen){
+             cur=1;
+             postUl.style.left=0;
+         }
+         animate(postUl,{left:-cur*880})
+     };
+     // 鼠标悬浮停止滚动
      postLast.onmouseover = function () {
          clearInterval(timer);
      };
+// 鼠标移出继续滚动
      postLast.onmouseout = function () {
-         clearInterval(timer);
          timer = setInterval(function () {
              cur++;
-             animate(postUl, {left: -880 * cur}, function () {
-                 if (cur == postLen - 1) {
-                     cur = 0;
-                     postUl.style.left = 0;
-                 }
-             })
-         }, 4000);
+             if(cur==postLen){
+                 cur=1;
+                 postUl.style.left=0;
+             }
+             animate(postUl,{left:-cur*880})
+         }, 3000);
+     };
 
-        //advertising的选项卡
+
+
+
+
+
+     //advertising的选项卡
          var list = document.getElementById('list').getElementsByTagName('div');
          var livingAbroad = document.getElementById('livingAbroad');
          var son = document.getElementsByClassName('list_son');
@@ -54,11 +80,3 @@
              }
          }
      }
- }
-//var s=0;
-//for(i=0;i<5;i++){
-//    s+=i;
-//    alert(s);
-//    i++;
-//}
-//alert(s);

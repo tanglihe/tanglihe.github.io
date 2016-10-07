@@ -14,18 +14,31 @@ window.onload= function () {
     var storeUl = storeContent.getElementsByTagName('ul')[0]; //集合
     var storeLi = storeContent.getElementsByTagName('li');
     var storeLen = storeLi.length;
-    var storeLenTrue = storeLen/4;
     var cur=0;
-    var timer;
-    //timer=setInterval(function () {
-    //    cur++;
-    //    animate(storeUl,{left:-1200*cur}, function () {
-    //        if(cur==storeLenTrue-1){
-    //            cur=0;
-    //            storeUl.style.left=0;
-    //        }
-    //    })
-    //},1000);
+    var storeLeft = $('storeLeft');
+    var storeRight = $('storeRight');
+    storeRight.onclick= function () {
+        cur++;
+        if(cur==storeLen-3){
+            cur=1;
+            storeUl.style.left=0;
+        }
+        animate(storeUl,{left:-303*cur});
+    };
+
+
+    // 左键点击
+    storeLeft.onclick= function () {
+        cur--;
+        if(cur==-1){
+            cur=storeLen-5;
+            var storeLeft = -(storeLen-4)*303 + 'px';
+            storeUl.style.left=storeLeft;
+        }
+        animate(storeUl,{left:-cur*303});
+    };
+
+  
 
 
 
@@ -55,4 +68,67 @@ window.onload= function () {
             }
         }
     }
+
+
+
+
+    // recentPost 轮播部分
+    var post = $('content');
+    var postUl = post.getElementsByTagName('ul')[0];
+    var postLi = postUl.getElementsByTagName('li');
+    var postLen = postLi.length;
+    var postLeft = $('postLeft');
+    var postRight = $('postRight');
+    var postCur=0;
+    var postTimer;
+    // 自动滚动
+    postTimer=setInterval(function () {
+        postCur++;
+        if(postCur==postLen){
+            postCur=1;
+            postUl.style.left=0;
+        }
+        animate(postUl,{left:-1200*postCur})
+    },3000);
+
+    //右键点击
+    postRight.onclick= function () {
+        postCur++;
+        if(postCur==postLen){
+            postCur=1;
+            postUl.style.left=0;
+        }
+        animate(postUl,{left:-1200*postCur});
+    };
+    //左键点击
+    postLeft.onclick= function () {
+        postCur--;
+        if(postCur==-1){
+            postCur=postLen-2;
+            var postLeft = -(postLen-1)*1200 + 'px';
+            postUl.style.left=postLeft;
+        }
+        animate(postUl,{left:-postCur*1200});
+    };
+
+    post.onmouseover=function () {
+        clearInterval(postTimer);
+    }
+    post.onmouseout=function () {
+        postTimer=setInterval(function () {
+            postCur++;
+            if(postCur==postLen){
+                postCur=1;
+                postUl.style.left=0;
+            }
+            animate(postUl,{left:-1200*postCur})
+        },3000);
+    }
+
+
+
+
+
+
+
 };

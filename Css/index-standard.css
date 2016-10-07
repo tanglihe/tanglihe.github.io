@@ -292,7 +292,6 @@ header {
 }
 #storeContent {
     margin:0 auto;
-    background: red;
     width: 1200px;
     height: 390px;
     overflow: hidden;
@@ -301,7 +300,6 @@ header {
     left:0;
 }
 #storeContent ul {
-    background: blue;
     width: 6000px;
     height: 390px;
     border-bottom: 1px #e6e6e6 solid;
@@ -315,10 +313,9 @@ header {
     height: 368px;
     border:1px #f8f8f8 solid;
     position: relative;
-}
-#storeContent .spacing{
     margin-right: 20px;
 }
+
 #storeContent li:hover {
     border:1px #ededed solid;
 }
@@ -491,7 +488,7 @@ header {
     left:0;
     width: 40px;
     height: 170px;
-    background-color: #eeeeee;
+    background:rgba(0,0,0,.5);
     font-size: 30px;
     line-height: 170px;
     text-align: center;
@@ -503,7 +500,7 @@ header {
     right:0;
     width: 40px;
     height: 170px;
-    background-color: #eeeeee;
+    background:rgba(0,0,0,.5);
     font-size: 30px;
     line-height: 170px;
     text-align: center;
@@ -512,18 +509,19 @@ header {
 }
 .recent_posts_show .content {
     position: relative;
-    width: 1110px;
-    padding:0 40px 0 50px;
+    width: 1200px;
     height: 170px;
     float: left;
     overflow: hidden;
 }
 .recent_posts_show .content ul {
-    width: 4440px;
+    position: absolute;
+    left:0;
+    width: 6000px;
 }
 .recent_posts_show .content li {
     float: left;
-    width: 1110px;
+    width: 1200px;
 }
 .recent_posts_show .content .bg {
     width: 200px;
