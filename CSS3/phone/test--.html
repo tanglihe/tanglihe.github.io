@@ -57,7 +57,6 @@
         }
         .all {
             position: relative;
-            border:0.01rem #d5d5d5 solid;
             border-radius:0.20rem;
             overflow: hidden;
         }
@@ -209,7 +208,7 @@
         </div>
     </div>
     <div class="big_img_content">
-        <div class="all">
+        <div class="all" id="all">
             <img src="bg.png" alt="background" class="bg">
             <img src="home.png" alt="home" class="home">
             <img src="gift.png" alt="gift" class="gift">
@@ -288,7 +287,9 @@
 
     var qr = document.getElementById('QR');
     var btn = document.getElementById('btn');
+    var all = document.getElementById('all');
     btn.onclick =function () {
+        all.style.border = '1px #d5d5d5 solid';
         qr.style.display = 'block';
         btn.style.display = 'none';
     }
