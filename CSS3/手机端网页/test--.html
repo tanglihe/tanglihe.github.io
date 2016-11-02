@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        .cf {
+            *zoom: 1;
+        }
+        .cf:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+        .top {
+            width: 100%;
+            height: 0.8rem;
+            padding:0.2rem;
+            box-sizing: border-box;
+            font-size: 0.3rem;
+            text-align: center;
+            line-height: 0.4rem;
+        }
+        .top img {
+            width: 0.36rem;
+            height: 0.36rem;
+            float: left;
+        }
+        .click_btn {
+            width:0.33rem;
+            height: 0.33rem;
+            float: right;
+        }
+        .click_btn span {
+            display: block;
+            width: 100%;
+            height:0.07rem;
+            background: #666666;
+            border-radius: 0.02rem;
+        }
+        .click_btn span:nth-of-type(2) {
+            margin:0.06rem 0;
+        }
+        .big_img_content {
+            width: 100%;
+            border-top:0.01rem #dddddd solid;
+            border-bottom:0.01rem #dddddd solid;
+            padding:0.2rem;
+            box-sizing: border-box;
+            background: #f4f4f4;
+            position: relative;
+        }
+        .all {
+            position: relative;
+            border:0.01rem #d5d5d5 solid;
+            border-radius:0.20rem;
+            overflow: hidden;
+        }
+        .big_img_content .bg {
+            width: 100%;
+            height: 100%;
+        }
+        .big_img_content .home{
+            border-radius: 50%;
+            width: 0.62rem;
+            height: 0.62rem;
+            position: absolute;
+            left:0.45rem;
+            top:0.45rem;
+        }
+        .big_img_content .gift{
+            width: 0.76rem;
+            height: 0.76rem;
+            position: absolute;
+            left:1.11rem;
+            top:1.47rem;
+        }
+        .big_img_content .line {
+            width: 0.01rem;
+            height: 0.76rem;
+            background: #96d9c0;
+            position: absolute;
+            left:2.26rem;
+            top:1.47rem;
+        }
+        .big_img_content .gift_paper {
+            display: inline-block;
+            box-sizing: border-box;
+            font-size: 0.25rem;
+            padding:0.06rem 0.70rem;
+            background: #d7fcd2;
+            color: #91cda0;
+            position: absolute;
+            right:-0.5rem;
+            top:0.4rem;
+            transform: rotate(45deg);
+        }
+        .big_img_content .span_1 {
+            display: inline-block;
+            color: #fff;
+            font-size: 0.25rem;
+            position: absolute;
+            left:1.21rem;
+            top:0.64rem;
+        }
+        .big_img_content .span_2 {
+            display: inline-block;
+            color: #fff;
+            font-size: 0.35rem;
+            position: absolute;
+            left:2.66rem;
+            top:1.47rem;
+        }
+        .big_img_content .span_3 {
+            display: inline-block;
+            color: #fff;
+            font-size: 0.20rem;
+            position: absolute;
+            left:2.66rem;
+            top:1.87rem;
+        }
+        .QR_code {
+            width: 100%;
+            padding-top:0.4rem;
+        }
+        .QR_code img {
+            display: block;
+            margin:0.35rem auto;
+        }
+        .QR_code p {
+            font-size:0.20rem;
+            color: #999999;
+            text-align: center;
+            padding-bottom: 0.30rem;
+        }
+        #QR {
+            display: none;
+        }
+        .list {
+            box-sizing: border-box;
+            width: 100%;
+            padding:0 0 0 0.20rem;
+            height: 2.40rem;
+            line-height: 0.80rem;
+        }
+        .list div {
+            width: 100%;
+            color: #333;
+            font-size: 0.25rem;
+            border-bottom:0.01rem #dddddd solid;
+            position: relative;
+
+        }
+        .list span {
+            display: inline-block;
+            padding-right: 0.2rem;
+            box-sizing: border-box;
+            position: absolute;
+            right:0;
+            top:0;
+            font-size: 0.25rem;
+            color: #8c8c8c;
+        }
+        .btn {
+            width: 100%;
+            height: 1.60rem;
+            padding:0.80rem 0.20rem 3.15rem;
+            box-sizing: border-box;
+            display: block;
+        }
+        .btn a {
+            text-decoration: none;
+            display: block;
+            color: #FFFFFF;
+            font-size: 0.3rem;
+            width: 100%;
+            height: 0.80rem;
+            border-radius: 0.10rem;
+            background-color: #ff7f02;
+            text-align: center;
+            line-height:0.80rem;
+        }
+        .bottom {
+            width: 100%;
+            padding: 0 0 0.5rem;
+        }
+        .bottom a {
+            padding-top: 0.6rem;
+            display: block;
+            width: 100%;
+            font-size: 0.26rem;
+            text-decoration: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="top cf">
+        <img src="ruturn.png" alt="return">
+        优惠券
+        <div class="click_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="big_img_content">
+        <div class="all">
+            <img src="bg.png" alt="background" class="bg">
+            <img src="home.png" alt="home" class="home">
+            <img src="gift.png" alt="gift" class="gift">
+            <div class="line"></div>
+            <div class="gift_paper">
+            礼品券
+            </div>
+            <span class="span_1">美乐乐家居旗舰店</span>
+            <span class="span_2">金秋10月优惠券</span>
+            <span class="span_3">领取后1天生效，有效期30天</span>
+
+            <div class="QR_code" id="QR">
+                <img src="QR_code.png" alt="QR_code">
+                <p>mll15613213546<br>
+                    将本页展示给店员即可使用
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="list">
+        <div>
+            使用说明 <span>&gt;</span>
+        </div>
+        <div>
+            适用门店 <span>&gt;</span>
+        </div>
+        <div>
+            客服电话 <span>&gt;</span>
+        </div>
+    </div>
+    <div class="btn" id="btn">
+        <a href="javascript:;">领取</a>
+    </div>
+    <div class="bottom">
+        <a href="javascript:;">查看我的卡包&gt;&gt;</a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    new function () {
+        var _self = this;
+        _self.width = 750; // 设置默认最大宽度
+        _self.fontSize = 100; // 默认字体大小
+        _self.widthProportion = function () {
+            var p = (document.body && document.body.clientWidth || document.getElementsByTagName("html")[0].offsetWidth) / _self.width;
+            return p;
+        };
+        _self.changePage = function () {
+            document.getElementsByTagName("html")[0].setAttribute("style", "font-size:" + _self.widthProportion() * _self.fontSize + "px !important");
+        };
+        _self.changePage();
+        window.addEventListener('resize', function () {
+            _self.changePage();
+        }, false);
+    };
+
+
+
+    var qr = document.getElementById('QR');
+    var btn = document.getElementById('btn');
+    btn.onclick =function () {
+        qr.style.display = 'block';
+        btn.style.display = 'none';
+    }
+</script>
+</body>
+</html>

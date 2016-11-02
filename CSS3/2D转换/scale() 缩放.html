@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background: #000;
+            color: #FFFFFF;
+            transition: 1s;
+            /*过渡*/
+        }
+        div:hover {
+            -ms-transform:scale(0.5,0.5); /* IE 9 */
+            -webkit-transform: scale(0.5,0.5); /* Safari */
+            transform: scale(.5,.5); /*标准放在最后避免覆盖*/
+        }
+    </style>
+</head>
+<body>
+<div>
+    x.y轴各缩小一倍，也可设置大于1的其他数（文本内容也会变化）
+</div>
+</body>
+</html>

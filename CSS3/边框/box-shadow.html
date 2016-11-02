@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            text-align: center;
+            line-height:200px;
+            border:1px black solid;
+            float: left;
+        }
+        .one {
+            box-shadow: 0 0 15px 5px #888888 inset;
+            /*六个参数都写，且v,h-shadow都设为0*/
+        }
+        .two {
+            box-shadow: 0 0 15px 5px #888888;
+            /*五个参数，没有inset，且v,h-shadow都设为0*/
+        }
+        .three {
+            box-shadow: 0 0 15px #888888;
+            /*四个参数，没有spread和inset，且v,h-shadow都设为0*/
+        }
+        .four {
+            box-shadow: 10px 10px 20px #888888;
+            /*四个参数，没有spread和inset，v,h-shadow都设为10px*/
+        }
+    </style>
+</head>
+<body>
+<!--参数有六个：前两个h-shadow,v-shadow表示阴影位置，必选。-->
+<!--后四个可选，分别为blur：模糊距离；spread：阴影大小；color：阴影颜色；inset：内阴影；-->
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four"></div>
+</body>
+</html>

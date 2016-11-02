@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <style>
+        /*background-clip:对背景色有效；而background-origin:对背景图片有效*/
+        #one {
+            border: 10px dotted black;
+            /*dotted:小方块*/
+            padding:35px;
+            background: yellow;
+            margin-left: 20px;
+            display: inline-block;
+        }
+        #two {
+            border: 10px dotted black;
+            padding:35px;
+            background: yellow;
+            margin-left: 20px;
+            background-clip: padding-box;
+            display: inline-block;
+        }
+        #three {
+            border: 10px dotted black;
+            padding:35px;
+            background: yellow;
+            margin-left: 20px;
+            background-clip: content-box;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="three">我是content-clip</div>
+    <div id="two">我是padding-clip</div>
+    <div id="one">我是border-clip</div>
+
+</body>
+</html>

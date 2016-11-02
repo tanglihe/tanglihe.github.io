@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <style>
+        div {
+            border:1px black solid;
+        }
+        .one {
+            width: 200px;
+            height: 200px;
+            float: left;
+            border-radius: 6px 200px;
+            /*控制四个角*/
+        }
+        .two {
+            width: 120px;
+            height: 120px;
+            margin:40px auto;
+            border-radius:50%;
+            /*第一个参数控制左上角和右下角，第二个参数控制右上角和左下角*/
+        }
+        .three {
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-left: 50px;
+            border-radius:200px 6px;
+            /*控制四个角*/
+        }
+    </style>
+</head>
+<body>
+<div class="one">
+    <div class="two"></div>
+</div>
+<div class="three">
+    <div class="two"></div>
+</div>
+</body>
+</html>
