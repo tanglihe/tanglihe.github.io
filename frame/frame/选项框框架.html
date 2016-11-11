@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <style type="text/css">
+        * {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-size: 1.00rem;
+        }
+        .buttons-row .height {
+            line-height: 2.00rem;
+            height: 2.00rem;
+            border:1px black solid;
+            font-size: 1.00rem;
+        }
+        .tabs_border {
+            border:1px black solid;
+        }
+    </style>
+</head>
+<body>
+<div class="page-group">
+    <div class="page page-current">
+            <!-- 下面是正文 -->
+            <div class="content">
+                <div class="content-block">
+                    <div class="buttons-row">
+                        <a href="#tab1" class="tab-link active button height">Tab 1</a>
+                        <a href="#tab2" class="tab-link button height">Tab 2</a>
+                        <a href="#tab3" class="tab-link button height">Tab 3</a>
+                    </div>
+                </div>
+                <div class="tabs tabs_border">
+                    <div id="tab1" class="tab active">
+                        <div class="content-block">
+                            <p>This is tab 1 content</p>
+                        </div>
+                    </div>
+                    <div id="tab2" class="tab">
+                        <div class="content-block">
+                            <p>This is tab 2 content</p>
+                        </div>
+                    </div>
+                    <div id="tab3" class="tab">
+                        <div class="content-block">
+                            <p>This is tab 3 content<br>This is tab 3 content</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 上面是正文 -->
+
+        </div>
+    </div>
+</div>
+
+<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script>
+//    默认必须要执行$.init(),实际业务里一般不会在HTML文档里执行，通常是在业务页面代码的最后执行
+    $.init();
+    // 添加'refresh'监听器
+    $(document).on('refresh', '.pull-to-refresh-content',function(e) {
+        // 模拟2s的加载过程
+        setTimeout(function() {
+            var cardNumber = $(e.target).find('.card').length + 1;
+            var cardHTML = '<div class="card">' +
+                    '<div class="card-header">card'+cardNumber+'</div>' +
+                    '<div class="card-content">' +
+                    '<div class="card-content-inner">' +
+                    '这里是第' + cardNumber + '个card，下拉刷新会出现第' + (cardNumber + 1) + '个card。' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>';
+
+            $(e.target).find('.card-container').prepend(cardHTML);
+            // 加载完毕需要重置
+            $.pullToRefreshDone('.pull-to-refresh-content');
+        }, 2000);
+    });
+</script>
+</body>
+</html>
