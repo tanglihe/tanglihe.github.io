@@ -1,17 +1,721 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
+
     <meta charset="UTF-8">
-    <title></title>
-    <style>
-        div {
-            width: 100px;
-            height: 100px;
-            background: #000;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <!--不可以用手指缩放-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/response.js"></script>
 </head>
 <body>
-    <div></div>
+
+<div id="wrap_contain">
+    <!--规则页面-->
+    <!--<div class="rules">-->
+        <!--<img src="img/rules.png" class="rulesBackground">-->
+        <!--<img src="img/ruleBtn.png" class="rulesBtn">-->
+    <!--</div>-->
+    <div class="background"></div>
+    <!--天数对应的文本（固定写死的）-->
+    <div class="dayText">
+        <img src="img/textFirstDay.png" class="textFirstDay">
+        <img src="img/textSecondDay.png" class="textSecondDay">
+        <img src="img/textThirdDay.png" class="textThirdDay">
+        <img src="img/textFourthDay.png" class="textFourthDay">
+        <img src="img/textFifthDay.png" class="textFifthDay">
+        <img src="img/textSixthDay.png" class="textSixthDay">
+        <img src="img/textSeventhDay.png" class="textSeventhDay">
+        <img src="img/textEighthDay.png" class="textEighthDay">
+        <img src="img/textNinthDay.png" class="textNinthDay">
+        <img src="img/lastOne.png" class="lastOne">
+        <img src="img/lastTwo.png" class="lastTwo">
+        <img src="img/lastThree.png" class="lastThree">
+        <img src="img/lastText.png" class="lastText">
+    </div>
+
+    <!--天数图片-->
+    <div class="dayNumber">
+        <img src="img/1.png" class="dayCount">
+        <img src="img/2.png" class="dayCount">
+        <img src="img/3.png" class="dayCount">
+        <img src="img/4.png" class="dayCount">
+        <img src="img/5.png" class="dayCount">
+        <img src="img/6.png" class="dayCount">
+        <img src="img/7.png" class="dayCount">
+        <img src="img/8.png" class="dayCount">
+        <img src="img/9.png" class="dayCount">
+        <img src="img/10.png" class="dayCount">
+        <img src="img/11.png" class="dayCount">
+        <img src="img/12.png" class="dayCount">
+    </div>
+
+    <!--小鸡仔或鸡蛋的显示区域-->
+    <div class="chickenPosition">
+        <!--第一天的小鸡蛋-->
+        <div class="chicken">
+            <img src="img/egg_firstDay.png" class="firstDayEgg">
+        </div>
+        <!--第二天的小鸡蛋-->
+        <div class="chicken">
+            <img src="img/egg_secondDay.png" class="secondDayEgg">
+        </div>
+        <!--第三天的小鸡仔-->
+        <div class="thirdDayChicken chicken">
+            <img src="img/thirdBodyCloseEyes.png" class="chickenCloseEyes">
+            <img src="img/thirdLeftSwing.png" class="leftSwing">
+            <img src="img/thirdRightSwing.png" class="rightSwing">
+        </div>
+        <!--第四天的小鸡仔-->
+        <div class="fourthDayChicken chicken">
+            <img src="img/fourthDayBody_1.png" class="fourthDayBody_1">
+            <img src="img/fourthDayBody_1LeftFoot.png" class="fourthDayBody_1LeftFoot">
+            <img src="img/fourthDayBody_2RightFoot.png" class="fourthDayBody_2RightFoot">
+        </div>
+        <!--第五天的小鸡仔-->
+        <div class="fifthDayChicken chicken">
+            <!--&lt;!&ndash;<img src="img/fifthBodyOpenEyes.png" class="fifthBodyOpenEyes">&ndash;&gt;-->
+            <img src="img/fifthLeftSwing.png" class="fifthLeftSwing">
+            <img src="img/fifthRightSwing.png" class="fifthRightSwing">
+            <img src="img/fifthEyes.png" class="fifthLeftEyes">
+            <img src="img/fifthEyes.png" class="fifthRightEyes">
+        </div>
+        <!--第六，七，八天的小鸡仔-->
+        <div class="sixthDayChicken chicken">
+            <img src="img/sixthBodyOpenEyes.png" class="sixthBodyOpenEyes">
+            <img src="img/sixthBodyCloseEyes.png" class="sixthCloseEyes">
+            <img src="img/sixthLeftSwing.png" class="sixthLeftSwing">
+            <img src="img/sixthRightSwing.png" class="sixthRightSwing">
+            <img src="img/star_1.png" class="star_1">
+            <img src="img/star_2.png" class="star_2">
+            <img src="img/star_3.png" class="star_3">
+        </div>
+    </div>
+
+    <!--第九天的抽奖轮盘-->
+    <div class="prizeBackground" id="lottery">
+        <div class="first">
+            <div class="prizeShadow lottery-unit lottery-unit-0"></div>
+        </div>
+        <div class="second">
+            <div class="prizeShadow lottery-unit lottery-unit-0"></div>
+        </div>
+        <div class="third">
+            <div class="prizeShadow lottery-unit lottery-unit-0"></div>
+        </div>
+        <div class="fourth">
+            <div class="prizeShadow lottery-unit lottery-unit-0"></div>
+        </div>
+        <div class="fifth">
+            <div class="prizeShadow lottery-unit lottery-unit-0"></div>
+        </div>
+        <div class="sixth">
+            <div class="prizeShadow lottery-unit lottery-unit-0"></div>
+        </div>
+        <div class="seventh">
+            <div class="prizeShadow lottery-unit lottery-unit-0"></div>
+        </div>
+        <div class="eighth">
+            <div class="prizeShadow lottery-unit lottery-unit-0"></div>
+        </div>
+        <!--开始按钮-->
+        <input type="button" class="prizeStartBtn prizeBtn">
+        <input type="button" class="ninthCloseBtn">
+    </div>
+
+    <!--第九天的奖品抽取弹出层-->
+    <div class="prizeShow">
+        <input type="button" class="prizeShowBtn">
+        <div class="prizeImgList">
+            <img src="img/investAndDouble_1.png" class="investAndDouble_1">
+            <img src="img/investAndDouble_2.png" class="investAndDouble_2">
+            <img src="img/growthValue.png" class="growthValue">
+            <img src="img/heBaoToy.png" class="heBaoToy">
+            <img src="img/coinPurse.png" class="coinPurse">
+            <img src="img/getMoneyCard.png" class="getMoneyCard">
+            <img src="img/experienceMoney.png" class="experienceMoney">
+        </div>
+        <p class="congratulation">
+            恭喜你获得了： <span></span>
+        </p>
+    </div>
+
+
+
+    <!--加息券牌子相关图片-->
+    <div class="rateCoupon">
+        <!--投资牌子-->
+        <img src="img/invest.png" class="invest">
+        <!--查看加息券-->
+        <img src="img/checkRateCoupon.png" class="checkRateCoupon">
+        <img src="img/checkRateCouponFail.png" class="checkRateCouponFail">
+        <!--抽奖次数加一-->
+        <img src="img/addPrizeChance.png" class="addPrizeChance">
+        <img src="img/addPrizeChanceFail.png" class="addPrizeChanceFail">
+        <!--开始抽奖牌子-->
+        <img src="img/ninthStartPrize.png" class="ninthStartPrize">
+        <img src="img/ninthStartPrizeFail.png" class="ninthStartPrizeFail">
+        <!--没有开始抽奖的灰色图片，用这个代替先------------------------------------------------------------------------待完善-->
+        <!--20:00点后-->
+        <img src="img/twentyClock.png" class="twentyClock">
+    </div>
+
+    <!--滑动条文字内容，最后三天不在的------------------------------------------------------------------------------------->
+    <div class="showText">
+        <input type="button" class="btn">
+        <span></span>
+    </div>
+
+    <!--阴影层，公用部分----------------------------------------------------------------------------------------------->
+    <div class="shadow"></div>
+    <div class="prizeShowShadow"></div>
+
+    <!--满足5000元的用户的情况,弹框-->
+    <div class="thirdDayAlert">
+        <img src="img/thirdDayAlert.png">
+        <input type="button" class="rateCouponAlertBtn">
+    </div>
+
+    <!--不满足5000元的用户的情况，改成了跳转到APP零钱包界面了-->
+    <!--<div class="thirdDayFailAlert">-->
+        <!--<p>这里显示不满足5000元的提示性的文本</p>-->
+        <!--<img src="img/thirdDayFailAlert.png">-->
+        <!--<input type="button" class="rateCouponAlertBtn">-->
+    <!--</div>-->
+
+    <!--第六天部分-->
+    <div class="sixthDayAlert">
+        <img src="img/sixthDayAlert.png">
+        <input type="button" class="rateCouponAlertBtn">
+    </div>
+    <!--第七天部分-->
+    <div class="seventhDayAlert">
+        <img src="img/seventhDayAlert.png">
+        <input type="button" class="rateCouponAlertBtn">
+    </div>
+    <!--第八天部分-->
+    <div class="eighthDayAlert">
+        <img src="img/eighthDayAlert.png">
+        <input type="button" class="rateCouponAlertBtn">
+    </div>
+    <!--第九天的奖品列表-->
+    <div class="prizeList">
+        <span class="text_1"></span>
+        <img src="" class="img_1">
+        <span class="text_2"></span>
+        <img src="" class="img_2">
+        <span class="text_3"></span>
+        <img src="" class="img_3">
+        <span class="text_4"></span>
+        <img src="" class="img_4">
+        <img src="img/prizeList.png" class="prizeListBackground">
+        <img src="img/ninthCloseBtn.png" class="prizeListClose">
+    </div>
+
+    <input type="button" class="getMorePrize">
+    <!--初始为居中状态，没有elseGetMorePrize属性-->
+    <input type="button" class="gotPrize">
+    <!--初始不显示，等到有获取奖品后显示-->
+
+    <!--小鸡死亡升天弹框区域------------------------------------------------------------------------------------------->
+    <!--用户没有加息券时的弹框-->
+    <div class="chickenDiedFirst">
+        <img src="img/chickenDiedAlert_1.png" class="diedFirst">
+        <input type="button" class="chickenDiedBtn">
+    </div>
+    <!--用户有加息券时的弹框-->
+    <div class="chickenDiedSecond">
+        <img src="img/chickenDiedAlert_2.png" class="diedSecond">
+        <input type="button" class="chickenDiedBtn">
+    </div>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/getPrize.js"></script>
+<script>
+    $(function () {
+        pageResponse({
+            selectors : '#wrap_contain',
+            mode : 'contain',
+            width : '640',
+            height : '1008'
+        })
+    });
+    var config = "http://119.254.97.28:85/";
+//    测试环境
+    var url = {
+      ActivityProcess:"api/NewYear2017Chick/GetActivityProcess",
+      GetPrizes:"api/NewYear2017Chick/GetPrizes",
+      ReceivePrize:"api/NewYear2017Chick/ReceivePrize",
+      PrizeDraw:"api/NewYear2017Chick/PrizeDraw"
+    };
+
+//    对应天数感叹号按钮点击后出现的文本
+    var textArray = [
+        "今天转出持久度输给99.8%的用户并<br>无法获得奖励",
+        "今天转出，持久度输给98.5%的用户<br>并无法获得任何奖励",
+        "今天转出，荷小鸡不能进化为神兽。<br>并失去下面抽奖资格！",
+        "今天转出，持久度输给97.7%的用户并<br>失去抽奖资格！",
+        "今天转出，持久度输给96.8%的用户并<br>失去抽奖资格！",
+        "今天转出，持久度输给95.6%的用户并<br>失去抽奖资格",
+        "今天转出，持久度输给96.5%的用户并<br>无法获得下面的抽奖资格",
+        "今天转出，持久度输给95.8%的用户也<br>失去了下面的抽奖资格！",
+        "今天转出，小鸡不能变神兽，持久度输给<br>95.8%的用户，也失去了下面的抽奖资格！"
+    ];
+//    根据后台数据判断活动进程，改变图片的显示等
+
+//    页面加载成功时，自动获取token-------------------------------------------------------------------------------------
+    var token = ''; //获取token值
+    var QUEUE_HAS_MESSAGE = '';
+    var messagingIframe = null;
+    _createQueueReadyIframe(document);
+    function _createQueueReadyIframe(doc) {
+        messagingIframe = doc.createElement('iframe');
+        messagingIframe.style.display = 'none';
+        doc.documentElement.appendChild(messagingIframe)
+    }
+    QUEUE_HAS_MESSAGE = 'com.hebao.app/applyToken';
+    messagingIframe.src = 'hebao://' + QUEUE_HAS_MESSAGE;
+
+    //    封装的方法：------------------------------------------------------------------------------------------------->
+
+//    交互错误提示错误代码信息
+    function tipsError(res) {
+        var Message;
+        if(res.ErrorMessage) {
+            alert(res.ErrorMessage);
+            return;
+        }
+        switch(res.ErrorCode) {
+            case '100001':
+                Message = '该用户已参加过活动'
+                break;
+            case '100002':
+                Message = '该手机号已参加过活动'
+                break;
+            case '100003':
+                Message = '手机号未注册'
+                break;
+            case '100004':
+                Message = '部分用户发送体验金失败'
+                break;
+            case '100005':
+                Message = '数据异常'
+                break;
+            case '100006':
+                Message = '活动等级配置错误'
+                break;
+            case '100007':
+                Message = '未参加活动不能得奖'
+                break;
+            case '100008':
+                Message = '活动未开始'
+                break;
+            case '100009':
+                Message = '活动已结束'
+                break;
+            case '100010':
+                Message = '活动领奖时间到期'
+                break;
+            case '100011':
+                Message = '活动已下线'
+                break;
+            case '100012':
+                Message = '奖品不足'
+                break;
+            case '100013':
+                Message = '获取用户数据异常'
+                break;
+            case '100014':
+                Message = '不可重复领奖'
+                break;
+            case '100015':
+                Message = '名称已存在'
+                break;
+            case '100016':
+                Message = '没有资格参加活动'
+                break;
+            case '100017':
+                Message = '用户没有获得到奖励'
+                break;
+            case '100018':
+                Message = '名称非法'
+                break;
+            case '100019':
+                Message = '活动没到领奖时间'
+                break;
+            case '100020':
+                Message = '密码不符合规范'
+                break;
+            case '100021':
+                Message = '手机号码格式不正确'
+                break;
+            case '100022':
+                Message = '验证码不正确'
+                break;
+            case '100101':
+                Message = '用户已经存在团队'
+                break;
+            case '100102':
+                Message = '团队ID不能为空'
+                break;
+            case '100103':
+                Message = '团队找不到'
+                break;
+            case '100104':
+                Message = '团队人数已满'
+                break;
+            case '100105':
+                Message = '成员找不到'
+                break;
+            default:
+                Message = 'error';
+                break;
+        }
+        alert(Message)
+    }
+
+
+    var api = {};
+//    切换显示状态
+    api.exchange = function (obj) {
+        if($(obj).css("display") == "none"){
+            $(obj).show();
+        }else{
+            $(obj).hide();
+        }
+    };
+
+//    操作多个元素切换显示状态
+    api.showOrHide = function (obj_1,obj_2,obj_3) {
+        api.exchange(obj_1);
+        api.exchange(obj_2);
+        api.exchange(obj_3);
+    };
+
+//    对元素执行多种操作
+    api.Event = function (obj,type,callback,selector_1,selector_2,selector_3) {
+        $(obj)[0].addEventListener(type, function () {
+            callback(selector_1,selector_2,selector_3);
+        },false);
+    };
+
+//    元素添加类名
+    api.getClass = function (obj, attr) {
+        $(obj).addClass(attr);
+    };
+
+//    选择元素，隐藏其父级元素
+    api.parentHide = function (son,elseObj) {
+        $(son).click(function () {
+            $(son).parent().hide();
+            $(elseObj).hide();
+        })
+    };
+
+    $(".getMorePrize").click(function () {
+        window.location.href = "rules.html"
+    });
+
+
+//    奖品列表
+    $.ajax({
+        type: "GET",
+        headers:{
+            token:token
+        },
+        url: "GetPrizes.json",
+//        url: config + url.GetPrizes,
+        dataType: "json",
+        success:function (response) {
+//            若交互失败，提示失败原因
+            if(!response.Success){
+                tipsError(response);
+            }
+            $.showPrize = function (index,id,imgUrl) {
+                if(prizeAry[index].Id == id) {
+                    $(".prizeList img").eq(index).attr("src",imgUrl).show();
+                }
+            };
+            var prizeAry = response.Data;
+            console.info(prizeAry);
+            for(var i in prizeAry){
+                $(".prizeList span").eq(i).text(prizeAry[i].Name);
+                $.showPrize(i,175,"img/investAndDouble_1.png");
+                $.showPrize(i,63,"img/growthValue.png");
+                $.showPrize(i,167,"img/experienceMoney.png");
+                $.showPrize(i,168,"img/experienceMoney.png");
+                $.showPrize(i,169,"img/experienceMoney.png");
+                $.showPrize(i,35,"img/experienceMoney.png");
+                $.showPrize(i,24,"img/heBaoToy.png");
+                $.showPrize(i,170,"img/.png");//金鸡吊坠
+                $.showPrize(i,176,"img/investAndDouble_2.png");
+                $.showPrize(i,21,"img/coinPurse.png");
+                $.showPrize(i,80,"img/getMoneyCard.png");
+                $.showPrize(i,171,"img/getMoneyCard.png");//这里应该是加息券0.66的图片
+                $.showPrize(i,172,"img/getMoneyCard.png");//这里应该是加息券0.36的图片
+            }
+        }
+    });
+
+//    活动状态，天数等参数判定界面内容--------------------------------------------------------------------------------->
+    $.ajax({
+        type: "GET",
+        headers:{
+            token:token
+        },
+        url: "GetActivityProcess.json",
+//        url: config + url.ActivityProcess,
+        dataType: "json",
+        success:function (response) {
+//        判断用户是否有转出，若有则显示死亡小鸡图标，这里用弹框代替，待完善---------------------------
+            if(!response.Success){
+                tipsError(response);
+            }else{
+//                活动正在进行(1)中/活动已结束（2）
+                if(response.Data.ActivtiyState == 1){
+                    //                转出，小鸡死亡
+                    if(response.Data.IsEnded){
+                        $(".shadow").show();
+//                若有转出小鸡死亡，有加息券的情况
+                        response.Data.HasRateRisesVoucher?$(".chickenDiedSecond").show():$(".chickenDiedFirst").show();
+                        $(".chickenDiedBtn").click(function () {
+//                    一刷新进来就会弹出死亡的框
+                            window.location.href = "shouye.html"
+                        })
+                    }
+//        保存变量processDay，该值比实际天数小一
+                    var processDay =response.Data.ProcessDay-1;
+//        对应显示天数的牌子
+                    $(".dayCount").eq(processDay).show();
+//        对应显示当天的文本
+                    $(".dayText img").eq(processDay).show();
+//        对应显示当天点击滑动出现的文本
+                    $(".showText span").html(textArray[processDay]);
+//        对应显示小鸡，一到六天显示各自对应的，七，八显示第六天的，九不显示------------------------------------------->
+                    if(processDay<6){
+//            前6天
+                        $(".chicken").eq(processDay).show();
+                    }else if(processDay<8){
+//            第7、8天，显示第六天的鸡仔
+                        $(".chicken").eq(5).show();
+                    }else{
+//            第9天小鸡图形都不显示
+                        $(".chicken").hide();
+                    }
+
+//        牌子相关图片显示投资不够5000，第三，六，七，八，九天-----------------------------------------------
+                    if(response.Data.UserPocketMoneyAmount<5000){
+                        $(".invest").show();
+                    }else if(processDay == 2){
+                        $(".gotPrize").click(function () {
+                            $('.thirdDayChicken').hide();
+                        });
+                        $(".prizeListClose").click(function () {
+                            $('.thirdDayChicken').show();
+                        });
+//                      小鸡翅膀会不受z-index的影响而出现
+                        if(response.Data.CanReceivedPrizeTime){
+                            if(response.Data.IsReceivedPrize){//领取了
+                                $(".checkRateCouponFail").show();
+                            }else{
+                                $(".checkRateCoupon").show();
+                                $(".checkRateCoupon").click(function () {
+                                    api.showOrHide(".thirdDayAlert",".shadow",".checkRateCouponFail",".checkRateCoupon");
+
+//                                    小鸡翅膀会干扰
+                                    $(".thirdDayChicken").hide();
+                                    $(".rateCouponAlertBtn ").click(function () {
+                                        $('.thirdDayChicken').show();
+                                    });
+                                });
+                            }
+                        }else{
+                            $(".twentyClock").show();
+                        }
+                    }else if(processDay>=5&&processDay<8){
+//                   第六，七，八天
+                        if(processDay==5){
+                            if(response.Data.IsReceivedPrize){
+                                $(".addPrizeChanceFail").show();
+                            }else{
+                                $(".addPrizeChance").show();
+                                $.ajax({
+                                    type: "GET",
+                                    headers:{
+                                        token:token
+                                    },
+                                    url: "ReceivePrize.json",
+//                                    url: config + url.ReceivePrize,
+                                    dataType: "json",
+                                    success:function (response) {
+                                        if(response.Success){
+                                            $(".addPrizeChance").click(function () {
+                                                api.showOrHide(".sixthDayAlert",".shadow",".addPrizeChance");
+                                                $(".addPrizeChanceFail").show();
+                                            });
+                                        }
+                                    }
+                                });
+                            }
+                        }else if(processDay==6){
+                            if(response.Data.IsReceivedPrize){
+                                $(".addPrizeChanceFail").show();
+                            }else{
+                                $(".addPrizeChance").show();
+                                $.ajax({
+                                    type: "GET",
+                                    headers:{
+                                        token:token
+                                    },
+                                    url: "ReceivePrize.json",
+//                                    url: config + url.ReceivePrize,
+                                    dataType: "json",
+                                    success:function (response) {
+                                        if(response.Success){
+                                            $(".addPrizeChance").click(function () {
+                                                api.showOrHide(".seventhDayAlert",".shadow",".addPrizeChance");
+                                                $(".addPrizeChanceFail").show();
+                                            });
+                                        }
+                                    }
+                                });
+                            }
+                        }else if(processDay==7){
+                            if(response.Data.IsReceivedPrize){
+                                $(".addPrizeChanceFail").show();
+                            }else{
+                                $(".addPrizeChance").show();
+                                $.ajax({
+                                    type: "GET",
+                                    headers:{
+                                        token:token
+                                    },
+                                    url: "ReceivePrize.json",
+//                                    url: config + url.ReceivePrize,
+                                    dataType: "json",
+                                    success:function (response) {
+                                        if(response.Success){
+                                            $(".addPrizeChance").click(function () {
+                                                api.showOrHide(".seventhDayAlert",".shadow",".addPrizeChance");
+                                                $(".addPrizeChanceFail").show();
+                                            });
+                                        }
+                                    }
+                                });
+                            }
+                        }
+                    }else if(processDay == 8){
+//                        第九天时的抽奖次数情况
+                        if(response.Data.PrizeDrawCount>0){
+//                            若有抽奖次数的话
+                            $(".ninthStartPrize").show();
+                            $(".ninthStartPrize").click(function () {
+                                api.showOrHide(".prizeBackground",".shadow");
+                            });
+                        }
+//                        定义有抽奖次数的各种情况
+                        if(response.Data.PrizeDrawCount==3){
+                            $(".lastThree").show();
+                        }else if(response.Data.PrizeDrawCount == 2){
+                            $(".lastTwo").show();
+                        }else if(response.Data.PrizeDrawCount == 1){
+                            $(".lastOne").show();
+                        }else{
+                            $(".ninthStartPrize").hide();//彩色碑
+                            $(".textNinthDay").hide();//文本
+                            $(".ninthStartPrizeFail").show();//灰色碑
+                            $(".prizeStartBtn").hide();//开始抽奖的按钮不显示，防止剩下一次时，抽奖后没关闭抽奖界面
+                        }
+                    }
+
+//        投资牌子，点击前往APP零钱包界面
+                    $(".invest").click(function () {
+                        window.location.href="hebao://com.hebao.app/fixedDeposit_home";//跳转APP零钱包页面
+                    });
+
+//        查看已获得奖品按钮显示奖品列表
+                    if(response.Data.HasRateRisesVoucher){
+                        api.showOrHide(".gotPrize");
+                        api.getClass(".getMorePrize","elseGetMorePrize");
+                        $(".gotPrize").click(function () {
+//                        这里需要调奖品列表接口，显示已获得的奖品---------------------------------------------------------
+                            api.showOrHide(".prizeList",".shadow");
+                        })
+                    }
+                }else if(response.Data.ActivtiyState == 2){
+                    $(".lastText").show();
+                    $(".showText").hide();
+                    $(".gotPrize").show();
+                    $(".getMorePrize").addClass("elseGetMorePrize");
+                    $(".gotPrize").click(function () {
+                        $(".prizeList").show();
+                        $(".shadow").show();
+                    });
+                    if(response.Data.ProcessDay == 10){
+                        $(".dayCount").eq(9).show();
+                    }else if(response.Data.ProcessDay == 11){
+                        $(".dayCount").eq(10).show();
+                    }else if(response.Data.ProcessDay == 12){
+                        $(".dayCount").eq(11).show();
+                    }
+                }
+            }
+        }
+    });
+
+//    奖品列表右上角关闭按钮：
+//    api.parentHide(".prizeListCloseBtn",".shadow");
+    api.parentHide(".prizeListClose",".shadow");
+
+
+//    感叹号按钮点击滑动出现
+    var isClick = false;
+    $(".btn").click(function () {
+        if(!isClick){
+            $(".showText").animate({width:"480"},1000);
+            $(".showText span").animate({width:"460"},1000);
+            $(".showText").css("animation","none");//取消动画
+        }else{
+            $(".showText").animate({width:"82"},1000);
+            $(".showText span").animate({width:"30"},1000);
+            $(".showText").css("animation"," btnShake 4s 1s infinite");//恢复动画
+        }
+        isClick = !isClick;
+    });
+
+//    好哒按钮点击，阴影层和弹框消失
+    api.parentHide(".rateCouponAlertBtn",".shadow");
+
+//    抽奖轮盘的关闭按钮
+    api.parentHide(".ninthCloseBtn",".shadow");
+
+//    抽奖轮盘开始按钮
+    var click=false;
+    lottery.init('lottery');
+    //       初始化环境
+    $("#lottery .prizeBtn").click(function(){
+//       按钮点击事件
+        if (click) {
+            return false;
+        }else{
+            lottery.speed=100;
+            roll();
+            click=true;
+            return false;
+        }
+    });
+//奖品弹框
+    $(".prizeShowBtn").click(function () {
+        $(this).parent().hide();
+        $(".prizeShowShadow").hide();
+    });
+
+</script>
 </body>
 </html>

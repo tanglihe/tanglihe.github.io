@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .prizeGet {
+            width: 360px;
+            height: 360px;
+            border:1px black solid;
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+        }
+        .prize_1 {
+            width: 119px;
+            height: 119px;
+            border:1px black solid;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        .prize_2 {
+            width: 119px;
+            height: 119px;
+            border:1px black solid;
+            position: absolute;
+            left:120px;
+            top:0;
+        }
+        .prize_3 {
+            width: 119px;
+            height: 119px;
+            border:1px black solid;
+            position: absolute;
+            left: 240px;
+            top:0;
+        }
+        .prize_4 {
+            width: 119px;
+            height: 119px;
+            border:1px black solid;
+            position: absolute;
+            left: 240px;
+            top:120px;
+        }
+        .prize_5 {
+            width: 119px;
+            height: 119px;
+            border:1px black solid;
+            position: absolute;
+            left:240px;
+            top:240px;
+        }
+        .prize_6 {
+            width: 119px;
+            height: 119px;
+            border:1px black solid;
+            position: absolute;
+            left:120px;
+            top:240px;
+        }
+        .prize_7 {
+            width: 119px;
+            height: 119px;
+            border:1px black solid;
+            position: absolute;
+            left:0;
+            top:240px;
+        }
+        .prize_8 {
+            width: 119px;
+            height: 119px;
+            border:1px black solid;
+            position: absolute;
+            left:0;
+            top:120px;
+        }
+        .btn{
+            width: 119px;
+            height: 119px;
+            border:1px black solid;
+            position: absolute;
+            left:120px;
+            top:120px;
+            outline:none;
+        }
+        #lottery div{text-align:center;font-size:24px;color:#333;font-index:-999}
+        #lottery input{line-height:119px;display:block;text-decoration:none;}
+        #lottery div.active{background-color:#ea0000;}
+    </style>
+</head>
+<body>
+<div class="prizeGet" id="lottery">
+    <div class="prize_1 lottery-unit lottery-unit-0"></div>
+    <div class="prize_2 lottery-unit lottery-unit-0"></div>
+    <div class="prize_3 lottery-unit lottery-unit-0"></div>
+    <div class="prize_4 lottery-unit lottery-unit-0"></div>
+    <div class="prize_5 lottery-unit lottery-unit-0"></div>
+    <div class="prize_6 lottery-unit lottery-unit-0"></div>
+    <div class="prize_7 lottery-unit lottery-unit-0"></div>
+    <div class="prize_8 lottery-unit lottery-unit-0"></div>
+    <input type="button" class="prizeBtn">
+</div>
+<input type="text" class="txt">
+<script src="js/jquery.min.js"></script>
+<script src="js/getPrize.js"></script>
+<script type="text/javascript">
+    var click=false;
+    lottery.init('lottery');
+    //       初始化环境
+    $("#lottery .prizeBtn").click(function(){
+//       按钮点击事件
+        if (click) {
+            return false;
+        }else{
+            lottery.speed=100;
+            roll();
+            click=true;
+            return false;
+        }
+    });
+</script>
+</body>
+</html> 

@@ -1,0 +1,20 @@
+{
+  "Data": [
+    {
+      "Name": "sample string 1",
+      "Id":168
+    },
+    {
+      "Name": "sample string 2",
+      "Id": 172
+    },
+    {
+      "Name": "sample string 3",
+      "Id": 21
+    }
+  ],
+  "Success": true,
+  "ErrorCode": "sample string 2",
+  "ErrorMessage": "sample string 3",
+  "ServiceTime": "sample string 4"
+}

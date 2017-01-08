@@ -1,0 +1,16 @@
+{
+  "Data": {
+    "ActivtiyState":1,
+    "ProcessDay":3,
+    "PrizeDrawCount":3,
+    "IsEnded": false,
+    "IsReceivedPrize": false,
+    "CanReceivedPrizeTime": false,
+    "UserPocketMoneyAmount": 5000,
+    "HasRateRisesVoucher": true
+  },
+  "Success": true,
+  "ErrorCode": "sample string 2",
+  "ErrorMessage": "sample string 3",
+  "ServiceTime": "sample string 4"
+}
